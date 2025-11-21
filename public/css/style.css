@@ -1,0 +1,306 @@
+/* ================= GENERAL SECTIONS ================= */
+.mairie-section {
+    min-height: 100vh;
+    padding: 40px 0px;
+    text-align: center;
+    background-color: #faf9f6;
+    font-family: 'Georgia', serif;
+}
+
+.hebrew-text {
+    font-size: 16px;
+    color: #556032;
+    margin-top: 10px;
+}
+
+.mairie-title {
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: #556032;
+    font-weight: 500;
+    margin: 20px 0 25px;
+    font-family: 'Times New Roman', serif;
+}
+
+.mairie-img img {
+    width: 260px;
+    margin-bottom: 25px;
+}
+
+.couple-names {
+    font-size: 28px;
+    color: #556032;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.small-text {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.oui-text {
+    font-size: 32px;
+    font-style: italic;
+    color: #556032;
+    margin-bottom: 25px;
+}
+
+.event-date {
+    font-size: 22px;
+    color: #556032;
+}
+
+.event-date .sub-text {
+    font-size: 18px;
+}
+
+.address {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #556032;
+    line-height: 1.6;
+}
+
+.flower-img img {
+    width: 150px;
+    margin-top: 25px;
+}
+
+@media (min-width: 768px) {
+    .mairie-title { font-size: 48px; }
+    .couple-names { font-size: 32px; }
+    .oui-text { font-size: 40px; }
+    .mairie-img img { width: 320px; }
+    .flower-img img { width: 180px; }
+}
+
+/* ================= BEACH SECTION ================= */
+.beach-section {
+    min-height: 100vh;
+    padding: 40px 0px;
+    text-align: center;
+    background-color: #faf9f6;
+    font-family: 'Georgia', serif;
+    color: #556032;
+}
+
+.beach-title {
+    font-size: 38px;
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.beach-subtitle {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.beach-img img {
+    width: 260px;
+    margin-bottom: 25px;
+}
+
+.beach-names {
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin: 10px 0;
+    color: #556032;
+}
+
+.invite-line {
+    font-size: 19px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.beach-date {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.beach-date .subtext {
+    font-size: 18px;
+}
+
+.beach-location {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.palm-img img {
+    width: 130px;
+    margin: 20px auto;
+}
+
+.transport-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .beach-title { font-size: 48px; }
+    .beach-img img { width: 320px; }
+    .palm-img img { width: 160px; }
+}
+
+/* ================= HOUPPA SECTION ================= */
+.houppa-section {
+    min-height: 100vh;
+    padding: 40px 0px;
+    background-color: #faf9f6;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #556032;
+}
+
+.hebrew-top {
+    font-size: 16px;
+    color: #556032;
+}
+
+.houppa-title {
+    font-size: 36px;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', serif;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.houppa-img img {
+    width: 300px;
+    margin-bottom: 25px;
+}
+
+.parents-row {
+    margin: 30px 0;
+}
+
+.parents-block {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.invitation-line {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.hebrew-names {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.ceremony-date {
+    font-size: 24px;
+    margin: 25px 0 10px;
+}
+
+.ceremony-date .subtext {
+    font-size: 18px;
+}
+
+.ceremony-location {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.doves-img img {
+    width: 130px;
+    margin: 30px auto;
+}
+
+@media (min-width: 768px) {
+    .houppa-title { font-size: 46px; }
+    .houppa-img img { width: 350px; }
+    .doves-img img { width: 160px; }
+}
+
+/* ================= HOTELS SECTION ================= */
+.hotels-section {
+    min-height: 100vh;
+    padding: 40px 0;
+    background: #f8f7f2;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.hotels-section h2 {
+    color: #434b1b;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.hotels-section h5 {
+    font-style: italic;
+    color: #434b1b;
+}
+
+.hotels-section .intro-text {
+    max-width: 700px;
+    margin: auto;
+    color: #6d6d55;
+    font-size: 17px;
+}
+
+.hotels-section a {
+    font-size: 16px;
+    color: #76834b;
+    text-decoration: underline;
+}
+
+.hotels-section .btn {
+    background: #4C4E16;
+    color: #D1D7A6;
+    border: 1px solid #bfc6a3;
+    border-radius: 50px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.hotels-section img {
+    max-width: 120px;
+}
+
+/* ================= ADDRESSES SECTION ================= */
+.address-section {
+    background-color: #faf9f4;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    padding: 40px 0px;
+}
+
+.address-icon {
+    width: 55px;
+    height: 55px;
+    background: #dfe6d4;
+    font-size: 22px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.15);
+}
+
+/* ================= PRESENCE SECTION ================= */
+.presence-section {
+    background-color: #faf9f4;
+    text-align: center;
+    padding: 40px 0px;
+    font-family: 'Playfair Display', serif;
+}
+
+.presence-btn {
+    background: #6d6d42;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+}
