@@ -39,7 +39,7 @@
 
     </div>
 </section>
-<section id="beach" class="beach-section">
+<section id="beach" class="beach-section sr-fade">
     <div class="container">
 
         <!-- Title -->
@@ -179,7 +179,7 @@
 
         <!-- Key Image -->
         <div class="my-4">
-            <img src="{{ asset('assets/images/home/clef.png') }}" class="img-fluid">
+            <img src="{{ asset('assets/images/home/clef.png') }}" class="img-fluid animate-img">
         </div>
 
         <!-- Intro Text -->
@@ -248,7 +248,7 @@
         <p class="fst-italic mb-4">Les bonnes adresses d'Ambre et Jonathan</p>
 
         <img src="{{asset('assets/images/home/pates.png')}}" 
-             class="img-fluid mb-4" style="max-width:140px;">
+             class="img-fluid mb-4 animate-img" style="max-width:140px;">
 
         <p class="text-muted mb-5" style="max-width:480px; margin:auto;">
             Pour profiter pleinement de votre séjour, les mariés ont sélectionné quelques adresses à découvrir.
