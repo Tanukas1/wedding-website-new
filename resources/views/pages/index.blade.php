@@ -170,78 +170,75 @@
 <section id="hotels" class="hotels-section">
     <div class="container text-center">
         <!-- Heading -->
-            <h2 class="fw-bold">
-                VOTRE SÉJOUR
-            </h2>
-            <h5 class="mb-4">
-                Hôtels
-            </h5>
+        <h2 class="fw-bold">
+            VOTRE SÉJOUR
+        </h2>
+        <h5 class="mb-4">
+            Hôtels
+        </h5>
+
         <!-- Key Image -->
-            <div class="my-4">
-                <img src="{{ asset('assets/images/home/clef.png') }}" class="img-fluid">
-            </div>
-            <!-- Intro Text -->
-            <p class="mb-5 intro-text">
-                Afin de vous faciliter l'organisation de votre séjour, 
-                les mariés ont le plaisir de vous partager trois hôtels dans 
-                lesquels des tarifs ont été négociés pour vous.
+        <div class="my-4">
+            <img src="{{ asset('assets/images/home/clef.png') }}" class="img-fluid">
+        </div>
+
+        <!-- Intro Text -->
+        <p class="mb-5 intro-text">
+            Afin de vous faciliter l'organisation de votre séjour, 
+            les mariés ont le plaisir de vous partager trois hôtels dans 
+            lesquels des tarifs ont été négociés pour vous.
+        </p>
+
+        <!-- HOTEL 1 -->
+        <div class="mb-5">
+            <h4>MERCURE ROMA CORSO TRIESTE</h4>
+
+            <p class="text-muted mb-1">
+                Via Gradisca, 31, 00198 Rome, Italie
             </p>
-            <!-- HOTEL 1 -->
-            <div class="mb-5">
-                <h4>MERCURE ROMA CORSO TRIESTE</h4>
 
-                <p class="text-muted mb-1">
-                    Via Gradisca, 31, 00198 Rome, Italie
-                </p>
+            <a href="#">Vous pouvez télécharger le formulaire de réservation ici</a><br>
+            <small style="color:#6d6d55;">À renvoyer à l’adresse suivante : amanda.lambard@accor.com</small>
 
-                <a href="#">Vous pouvez télécharger le formulaire de réservation ici</a><br>
-                <small style="color:#6d6d55;">À renvoyer à l’adresse suivante : amanda.lambard@accor.com</small>
+            <p class="mt-3 mb-1" style="color:#6d6d55;">Pour plus d’informations sur l’hôtel :</p>
+            <a href="#" class="btn rounded-pill px-4">Mercure Roma Corso Trieste</a>
 
-                <p class="mt-3 mb-1" style="color:#6d6d55;">Pour plus d’informations sur l’hôtel :</p>
-                <a href="#" class="btn rounded-pill px-4">Mercure Roma Corso Trieste</a>
+            <div class="hotel-emoji">🌼</div>
+        </div>
 
-                <div class="mt-3">
-                    <img src="assets/images/leaf-icon.png" width="45">
-                </div>
-            </div>
-            <!-- HOTEL 2 -->
-            <div class="mb-5">
+        <!-- HOTEL 2 -->
+        <div class="mb-5">
+            <h4 style="text-decoration: underline;">THE HOXTON</h4>
 
-                <h4 style="text-decoration: underline;">THE HOXTON</h4>
+            <p class="text-muted mb-1">
+                Largo Benedetto Marcello, 220, 00198 Rome, Italie
+            </p>
 
-                <p class="text-muted mb-1">
-                    Largo Benedetto Marcello, 220, 00198 Rome, Italie
-                </p>
+            <a href="#">Veuillez accéder à ce lien</a><br>
+            <small style="color:#6d6d55;">Utiliser le code d'accès suivant : AMB070923</small>
 
-                <a href="#">Veuillez accéder à ce lien</a><br>
-                <small style="color:#6d6d55;">Utiliser le code d'accès suivant : AMB070923</small>
+            <p class="mt-3 mb-1" style="color:#6d6d55;">Pour plus d’informations sur l’hôtel :</p>
+            <a href="#" class="btn rounded-pill px-4">The Hoxton</a>
 
-                <p class="mt-3 mb-1" style="color:#6d6d55;">Pour plus d’informations sur l’hôtel :</p>
-                <a href="#" class="btn rounded-pill px-4">The Hoxton</a>
+            <div class="hotel-emoji">🌼</div>
+        </div>
 
-                <div class="mt-3">
-                    <img src="assets/images/leaf-icon.png" width="45">
-                </div>
-            </div>
-            <!-- HOTEL 3 -->
-            <div class="mb-5">
+        <!-- HOTEL 3 -->
+        <div class="mb-5">
+            <h4>SOFITEL ROMA VILLA BORGHESE</h4>
 
-                <h4>SOFITEL ROMA VILLA BORGHESE</h4>
+            <p class="text-muted mb-1">
+                Via Lombardia 47, 00187 Rome, Italie
+            </p>
 
-                <p class="text-muted mb-1">
-                    Via Lombardia 47, 00187 Rome, Italie
-                </p>
+            <a href="#">Vous pouvez télécharger le formulaire de réservation ici</a><br>
+            <small style="color:#6d6d55;">À renvoyer à l’adresse suivante : h878-RE@sofitel.com</small>
 
-                <a href="#">Vous pouvez télécharger le formulaire de réservation ici</a><br>
-                <small style="color:#6d6d55;">À renvoyer à l’adresse suivante : h878-RE@sofitel.com</small>
+            <p class="mt-3 mb-1" style="color:#6d6d55;">Pour plus d’informations sur l’hôtel :</p>
+            <a href="#" class="btn rounded-pill px-4">Sofitel Rome Villa Borghese</a>
 
-                <p class="mt-3 mb-1" style="color:#6d6d55;">Pour plus d’informations sur l’hôtel :</p>
-                <a href="#" class="btn rounded-pill px-4">Sofitel Rome Villa Borghese</a>
-
-                <div class="mt-3">
-                    <img src="assets/images/leaf-icon.png" width="45">
-                </div>
-            </div>
+            <div class="hotel-emoji">🌼</div>
+        </div>
     </div>
 </section>
 <section id="addresses" class="address-section" >
