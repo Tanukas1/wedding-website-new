@@ -127,7 +127,7 @@
                 <small>Minutes</small>
             </div>
         </div>
-
+        <h1>sdskdsd</h1>
         <a href="{{ url('/index') }}" class="btn btn-programme">Programme</a>
 
     </div>
