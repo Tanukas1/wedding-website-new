@@ -13,74 +13,29 @@
 
         <!-- Illustration -->
         <div class="mairie-img mx-auto">
-            <img src="{{ asset('assets/images/home/mairie-building.png') }}" alt="Mairie Illustration" class="img-fluid">
+            <img src="{{ asset('assets/images/home/Car-view.jpg') }}" alt="Mairie Illustration" class="img-fluid">
         </div>
 
         <!-- Names -->
-        <h2 class="couple-names">AMBRE & JONATHAN</h2>
+        <h2 class="couple-names">TAMARA & SOLAL</h2>
         <p class="small-text">se diront</p>
         <h3 class="oui-text">“ Oui ”</h3>
 
         <!-- Event details -->
         <p class="event-date">
-            Le Jeudi 28 Août 2025<br>
-            <span class="sub-text">à 14h précises</span>
+           Le mercredi 1 er juillet 2026 <br>
+            <span class="sub-text">À 15h précises </span>
         </p>
 
         <p class="address">
-            à la mairie du XVIᵉ arrondissement<br>
-            71 Av. Henri Martin, 75116 Paris
+            à la mairie du XVIe arrondissement <br>
+            71 av. Henri Martin, 75116 
         </p>
 
         <!-- Bottom floral image -->
         <div class="flower-img mx-auto">
-            <img src="{{ asset('assets/images/home/flower-bouquet.png') }}" alt="Flowers" class="img-fluid">
+            <img src="{{ asset('assets\images\home\Tawn-Hall.jpg') }}" alt="Flowers" class="img-fluid">
         </div>
-
-    </div>
-</section>
-<section id="beach" class="beach-section sr-fade">
-    <div class="container">
-
-        <!-- Title -->
-        <h1 class="beach-title">LA DOLCE VITA</h1>
-        <p class="beach-subtitle">Beach Party</p>
-
-        <!-- Illustration -->
-        <div class="beach-img mx-auto">
-            <img src="{{ asset('assets/images/home/Bagno-St-tropez.png') }}" alt="" class="img-fluid">
-        </div>
-
-        <!-- Names -->
-        <h2 class="beach-names">AMBRE & JONATHAN</h2>
-
-        <!-- Invitation -->
-        <p class="invite-line">Vous attendent pour une Beach Party</p>
-
-        <!-- Date -->
-        <p class="beach-date">
-            Le Lundi 8 Septembre 2025<br>
-            <span class="subtext">à partir de 12h</span>
-        </p>
-
-        <!-- Location -->
-        <p class="beach-location">
-            Plage Bagno Saint Tropez – Fregene<br>
-            Lungomare di Levante, 244, 00054 Fregene,<br>
-            Rome, Italie
-        </p>
-
-        <!-- Palm trees -->
-        <div class="palm-img mx-auto">
-            <img src="{{ asset('assets/images/home/PALMIERS.png') }}" class="img-fluid" alt="">
-        </div>
-
-        <!-- Transport -->
-        <p class="transport-text">
-            Des navettes vous attendront<br>
-            devant les 3 hôtels proposés par les mariés,<br>
-            à 11h précises
-        </p>
 
     </div>
 </section>
@@ -95,7 +50,7 @@
 
         <!-- Illustration -->
         <div class="houppa-img mx-auto">
-            <img src="{{ asset('assets/images/home/villa-mondragone.png') }}" alt="" class="img-fluid">
+            <img src="{{ asset('assets/images/home/Stage.jpg') }}" alt="" class="img-fluid">
         </div>
 
         <!-- Parents Names Row -->
@@ -126,7 +81,7 @@
         </p>
 
         <!-- Couple names -->
-        <h2 class="couple-names">AMBRE & JONATHAN</h2>
+        <h2 class="couple-names">TAMARA & SOLAL</h2>
 
         <!-- Hebrew names -->
         <p class="hebrew-names">שמענון משה    שיילה</p>
@@ -139,8 +94,8 @@
 
         <!-- Date -->
         <p class="ceremony-date">
-            Le Mardi 9 Septembre 2025<br>
-            <span class="subtext">à 17h précises</span>
+            Le 29 juillet 2026<br>
+            <span class="subtext">à 16h précises</span>
         </p>
 
         <!-- Location -->
@@ -162,7 +117,51 @@
         <p class="transport-text">
             Des navettes vous attendront<br>
             devant les 3 hôtels proposés par les mariés,<br>
-            à 16h précises
+            à 15h précises
+        </p>
+
+    </div>
+</section>
+<section id="beach" class="beach-section sr-fade">
+    <div class="container">
+
+        <!-- Title -->
+        <h1 class="beach-title">LA DOLCE PYTEL </h1>
+        <p class="beach-subtitle">White party</p>
+
+        <!-- Illustration -->
+        <div class="beach-img mx-auto">
+            <img src="{{ asset('assets/images/home/party.png') }}" alt="" class="img-fluid">
+        </div>
+
+        <!-- Names -->
+        <h2 class="beach-names">TAMARA & SOLAL</h2>
+
+        <!-- Invitation -->
+        <p class="invite-line"> vous attendent pour une White party </p>
+
+        <!-- Date -->
+        <p class="beach-date">
+           Le jeudi 30 juillet 2026 <br>
+            <span class="subtext">À partir de 16h </span>
+        </p>
+
+        <!-- Location -->
+        <p class="beach-location">
+            à la mairie du XVIe arrondissement <br>
+            71 av. Henri Martin, 75116 
+        </p>
+
+        <!-- Palm trees -->
+        <div class="palm-img mx-auto">
+            <img src="{{ asset('assets/images/home/PALMIERS.png') }}" class="img-fluid" alt="">
+        </div>
+
+        <!-- Transport -->
+        <p class="transport-text">
+            Des navettes vous attendront<br>
+            devant les 3 hôtels proposés par les mariés,<br>
+            à 11h précises
         </p>
 
     </div>
@@ -201,9 +200,9 @@
             <small style="color:#6d6d55;">À renvoyer à l’adresse suivante : amanda.lambard@accor.com</small>
 
             <p class="mt-3 mb-1" style="color:#6d6d55;">Pour plus d’informations sur l’hôtel :</p>
-            <a href="#" class="btn rounded-pill px-4">Mercure Roma Corso Trieste</a>
+            <a href="https://all.accor.com/hotel/3320/index.fr.shtml" class="btn rounded-pill px-4">Mercure Roma Corso Trieste</a>
 
-            <div class="hotel-emoji">🌼</div>
+            <div class="hotel-emoji">🙂</div>
         </div>
 
         <!-- HOTEL 2 -->
@@ -218,9 +217,9 @@
             <small style="color:#6d6d55;">Utiliser le code d'accès suivant : AMB070923</small>
 
             <p class="mt-3 mb-1" style="color:#6d6d55;">Pour plus d’informations sur l’hôtel :</p>
-            <a href="#" class="btn rounded-pill px-4">The Hoxton</a>
+            <a href="https://thehoxton.com/fr/italy/rome/" class="btn rounded-pill px-4">The Hoxton</a>
 
-            <div class="hotel-emoji">🌼</div>
+            <div class="hotel-emoji">🙂</div>
         </div>
 
         <!-- HOTEL 3 -->
@@ -235,9 +234,9 @@
             <small style="color:#6d6d55;">À renvoyer à l’adresse suivante : h878-RE@sofitel.com</small>
 
             <p class="mt-3 mb-1" style="color:#6d6d55;">Pour plus d’informations sur l’hôtel :</p>
-            <a href="#" class="btn rounded-pill px-4">Sofitel Rome Villa Borghese</a>
+            <a href="https://www.sofitelrome.com/fr/" class="btn rounded-pill px-4">Sofitel Rome Villa Borghese</a>
 
-            <div class="hotel-emoji">🌼</div>
+            <div class="hotel-emoji">🙂</div>
         </div>
     </div>
 </section>

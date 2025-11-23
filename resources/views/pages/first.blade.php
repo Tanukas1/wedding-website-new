@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ladolcepytel.ts. </title>
+    <title>ladolcepytel.ts.</title>
 
-    <!-- PRELOAD IMAGE → fixes text-first loading problem -->
-    <link rel="preload" as="image" href="{{ asset('/assets/main-image/fond-accueil.png') }}">
+    <!-- PRELOAD IMAGE -->
+    <link rel="preload" as="image" href="{{ asset('/assets/images/main-image/frame-home.jpg') }}">
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,16 +20,20 @@
             font-family: "Georgia", serif;
         }
 
-        /* MAIN HERO SECTION SAME AS YOUR IMAGE */
-         .welcome-section {
-            background-image: url("{{ asset('/assets/images/main-image/fond-accueil.png') }}");
+        /* MAIN HERO SECTION */
+        .welcome-section {
+            background-image: url("{{ asset('assets/images/main-image/frame-home.jpg') }}");
             background-position: center center;
-            background-size: cover;
             background-repeat: no-repeat;
+            background-size: cover; 
             min-height: 100vh;
             text-align: center;
-            padding-top: 341px; /* same as theme */
-            padding-bottom: 80px; /* same as theme */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 0;
             color: #4d522e;
         }
 
@@ -38,6 +42,11 @@
             width: 100%;
             max-width: 600px;
             color: #4d522e;
+        }
+
+        /* TEXT BLOCK (moves text only) */
+        .text-block {
+            padding-top: 25px; /* ← Adjust text up/down HERE */
         }
 
         .couple-name {
@@ -50,113 +59,94 @@
         .date-place {
             font-size: 18px;
             font-style: italic;
-            /* margin-bottom: 15px; */
         }
 
-        /* COUNTDOWN */
         .counter-box div {
             font-size: 20px;
             font-weight: bold;
         }
 
-        /* BUTTON */
+        /* BUTTON (moves button only) */
         .btn-programme {
             background-color: #575f2d;
             color: #fff;
             padding: 10px 30px;
             border-radius: 5px;
             font-size: 18px;
-            margin-top: 45px;
+            margin-top: 271px; /* ← Adjust button position independently */
         }
 
         .btn-programme:hover {
             background-color: #474e25;
             color:#fff;
         }
-
-        /* ----------- MOBILE FIX ----------- */
-        @media (max-width: 768px) {
-            .welcome-section {
-                background-size: cover;     
-                padding-bottom: 100px;
-            }
-
-            .couple-name {
-                font-size: 26px;
-            }
-
-            .date-place {
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .welcome-section {
-                padding-bottom: 80px;
-            }
-        }
-
-
     </style>
 </head>
 
 <body>
 
 <section class="welcome-section">
-
     <div class="content-wrapper">
 
-        <div class="couple-name">AMBRE & JONATHAN</div>
+        <!-- TEXT BLOCK -->
+        <div class="text-block">
 
-        <div class="date-place">
-            7 au 10 Septembre 2025 <br>
-            Rome, Italie.
-        </div>
+            <div class="couple-name">TAMARA & SOLAL</div>
 
-        <div class="d-flex justify-content-center gap-4">
-            <div class="counter-box text-center">
-                <div>00</div>
-                <small>Days</small>
+            <div class="date-place">
+                Mercredi 1er juillet 2026<br>
+                À 15h précises
             </div>
-            <div class="counter-box text-center">
-                <div>00</div>
-                <small>Hours</small>
+
+            <div class="d-flex justify-content-center gap-4 mt-3">
+                <div class="counter-box text-center">
+                    <div>00</div>
+                    <small>Days</small>
+                </div>
+                <div class="counter-box text-center">
+                    <div>00</div>
+                    <small>Hours</small>
+                </div>
+                <div class="counter-box text-center">
+                    <div>00</div>
+                    <small>Minutes</small>
+                </div>
             </div>
-            <div class="counter-box text-center">
-                <div>00</div>
-                <small>Minutes</small>
-            </div>
+
         </div>
-        <h1>hello</h1>
+        <!-- END TEXT BLOCK -->
+
+        <!-- BUTTON OUTSIDE TEXT-BLOCK (independent movement) -->
         <a href="{{ url('/index') }}" class="btn btn-programme">Programme</a>
 
     </div>
-
 </section>
 
 </body>
+
 <script>
-    // Set event date (7 September 2025)
-    const eventDate = new Date("2025-09-07T00:00:00").getTime();
+    const eventDate = new Date("2026-07-01T15:00:00").getTime();
 
     function updateCountdown() {
-        let now = new Date().getTime();
+        const now = new Date().getTime();
         let distance = eventDate - now;
 
         if (distance < 0) distance = 0;
 
-        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-        let minutes = Math.floor((distance / (1000 * 60)) % 60);
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-        document.querySelectorAll(".counter-box div")[0].innerText = days;
-        document.querySelectorAll(".counter-box div")[1].innerText = hours;
-        document.querySelectorAll(".counter-box div")[2].innerText = minutes;
+        const counterBoxes = document.querySelectorAll(".counter-box");
+        if (counterBoxes.length === 3) {
+            counterBoxes[0].querySelector("div").innerText = days.toString().padStart(2, "0");
+            counterBoxes[1].querySelector("div").innerText = hours.toString().padStart(2, "0");
+            counterBoxes[2].querySelector("div").innerText = minutes.toString().padStart(2, "0");
+        }
     }
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
 </script>
-
 
 </html>
