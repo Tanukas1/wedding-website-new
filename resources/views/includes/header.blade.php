@@ -2,28 +2,26 @@
 
 <!-- ================= TOP BAR ================= -->
 <div class="top-bar">
-    <a href="{{ url('/') }}">
-        <img src="{{ url('assets/images/main-image/logo.png') }}" alt="Logo" class="logo">
-    </a>
 
-    <!-- TIMER (3 line format) -->
-    <div class="timer">
-        <div>00<br><span>Days</span></div>
-        <div>00<br><span>Hours</span></div>
-        <div>00<br><span>Minutes</span></div>
-        <div>00<br><span>Seconds</span></div>
+    <div class="timer-lace">
+        <div class="timer">
+            <div>00<br><span>Days</span></div>
+            <div>00<br><span>Hours</span></div>
+            <div>00<br><span>Minutes</span></div>
+            <div>00<br><span>Seconds</span></div>
+        </div>
     </div>
 
     <div class="menu-toggle" onclick="toggleMenu()">≡</div>
 </div>
+
 
 <!-- ================= OVERLAY MENU ================= -->
 <div id="overlayMenu" class="overlay-menu">
 
     <!-- SAME TOPBAR INSIDE MENU -->
     <div class="overlay-top">
-        <img src="{{(asset('assets/images/main-image/logo.png'))}}" class="logo">
-
+    
         <div class="timer">
             <div>00<br><span>Days</span></div>
             <div>00<br><span>Hours</span></div>

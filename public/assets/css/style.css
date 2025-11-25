@@ -11,27 +11,33 @@
       align-items: center;
       padding: 10px 20px;
   }
+/* LACE FRAME AROUND TIMER */
+   .timer-lace {
+    background-image: url("../images/home//border.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: none;
+    background-color: transparent;
+}
 
-  .logo {
-      width: 45px;
-  }
 
   /* TIMER 3 LINE FORMAT */
- .timer {
-    display: flex;
-    gap: 10px;
-    text-align: center;
-    font-size: 12px;
-    letter-spacing: 1px;
-    font-family: 'Cinzel Decorative', serif;
-}
+    .timer {
+        display: flex;
+        gap: 10px;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-family: 'Cinzel Decorative', serif;
+    }
 
-.timer div {
-    display: flex;
-    flex-direction: column;
-    line-height: 14px;
-}
-
+    .timer div {
+        display: flex;
+        flex-direction: column;
+        line-height: 14px;
+        font-weight: bold;
+    }
 
   /* RIGHT BUTTON (hamburger + cross) */
   .menu-toggle, .close-btn {
@@ -91,9 +97,9 @@
       border-top: 1px solid rgba(0,0,0,0.15);
   }
   /* Remove top border from first menu item */
-.menu-links li:first-child {
-    border-top: none !important;
-}
+    .menu-links li:first-child {
+        border-top: none !important;
+    }
 
 
   .menu-links a {
@@ -144,10 +150,11 @@
 }
 
 .couple-names {
-    font-size: 28px;
-    color: #556032;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
+    font-family: 'Artis-Swing', cursive;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #800020;
 }
 
 .small-text {

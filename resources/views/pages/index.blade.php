@@ -1,382 +1,190 @@
-@extends('layout.master')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
-<!-- ================= SAMPLE SECTIONS ================= -->
-<section id="mairie" class="mairie-section">
-    <div class="container">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> ladolcepytel.ts.</title>
 
-        <!-- Top Hebrew small text -->
-        <p class="text-end hebrew-text">בס״ד</p>
+    <!-- Google Script Font (Great Vibes) -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
-        <!-- Main Heading -->
-        <h1 class="mairie-title">LA MAIRIE</h1>
+    <!-- PRELOAD IMAGE -->
+    <link rel="preload" as="image" href="{{ asset('/assets/images/main-image/frame-home.jpg') }}">
 
-        <!-- Illustration -->
-        <div class="mairie-img mx-auto">
-            <img src="{{ asset('assets/images/home/Car-view.jpg') }}" alt="Mairie Illustration" class="img-fluid">
-        </div>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+<style>
+    html, body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        font-family: "Georgia", serif;
+    }
 
-        <!-- Names -->
-        <h2 class="couple-names">TAMARA & SOLAL</h2>
-        <p class="small-text">se diront</p>
-        <h3 class="oui-text">“ Oui ”</h3>
+    @font-face {
+        font-family: 'Artis-Swing';
+        src: url('{{ asset("assets/font/artis-swing-extralight/Artis-Swing Extralight/Artis-Swing Extralight.otf") }}') format("truetype");
+        font-weight: normal;
+        font-style: normal;
+    }
 
-        <!-- Event details -->
-        <p class="event-date">
-           Le mercredi 1 er juillet 2026 <br>
-            <span class="sub-text">À 15h précises </span>
-        </p>
+    /* DEFAULT = MOBILE BACKGROUND IMAGE */
+    .welcome-section {
+        background-image: url("{{ asset('assets/images/main-image/frame-home-mobile.jpg') }}");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        text-align: center;
 
-        <p class="address">
-            à la mairie du XVIe arrondissement <br>
-            71 av. Henri Martin, 75116 
-        </p>
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
 
-        <!-- Bottom floral image -->
-        <div class="flower-img mx-auto">
-            <img src="{{ asset('assets\images\home\Tawn-Hall.jpg') }}" alt="Flowers" class="img-fluid">
-        </div>
+    /* DESKTOP BACKGROUND IMAGE */
+    @media (min-width: 992px) {
+        .welcome-section {
+            background-image: url("{{ asset('assets/images/main-image/frame-home-desktop.jpg') }}");
+        }
+    }
 
-    </div>
-</section>
-<section id="houppa" class="houppa-section">
-    <div class="container">
+    .content-wrapper {
+        width: 100%;
+        max-width: 600px;
+    }
 
-        <!-- Small Hebrew text -->
-        <p class="text-end hebrew-top">בס״ד</p>
+    .text-block {
+        margin-top: -40px; /* Move text higher */
+    }
 
-        <!-- Title -->
-        <h1 class="houppa-title">HOUPPA & RÉCEPTION</h1>
+    .couple-name {
+        font-family: 'Artis-Swing', cursive;
+        font-size: 42px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        color: #800020; /* Burgundy */
+    }
 
-        <!-- Illustration -->
-        <div class="houppa-img mx-auto">
-            <img src="{{ asset('assets/images/home/Stage.jpg') }}" alt="" class="img-fluid">
-        </div>
+    .date-place {
+        font-size: 15px;
+        font-style: italic;
+        color: #800020;
+        line-height: 1.7;
+    }
 
-        <!-- Parents Names Row -->
-        <div class="row justify-content-center parents-row">
+   .counter-box div {
+        font-size: 22px;
+        font-weight: 400;
+        font-family: 'Cinzel Decorative', serif;
+        color: #800020; 
+    }
 
-            <div class="col-md-4">
-                <p class="parents-block">
-                    Liliane et Jacob Fayer<br>
-                    Martine et Salomon Taïeb<br>
-                    Elsa Hanoun Fayer et Thierry Fayer
-                </p>
+    .counter-box small {
+        color: #800020;
+    }
+
+    .btn-programme {
+        background-color: #800020;
+        color: #fff;
+        padding: 10px 30px;
+        border-radius: 5px;
+        font-size: 18px;
+        margin-top: 260px; /* Button position */
+    }
+
+    .btn-programme:hover {
+        background-color: #800020;
+        color: #fff;
+    }
+</style>
+
+</head>
+
+<body>
+ <audio id="bg-music" autoplay loop muted style="display:none;">
+        <source src="{{ asset('assets/images/main-image/song.mp3') }}" type="audio/mpeg">
+</audio>
+
+<section class="welcome-section">
+    <div class="content-wrapper">
+
+        <!-- TEXT AREA -->
+        <div class="text-block">
+            <div class="couple-name">Tamara & Solal</div>
+
+            <div class="date-place">
+                29–30 Juillet 2026<br>
+                Rome, Italie
             </div>
 
-            <div class="col-md-4">
-                <p class="parents-block">
-                    Liliane et Simon Benhamou<br>
-                    Paulette et Maurice Temstet<br>
-                    Laurence et Jérôme Benhamou
-                </p>
-            </div>
-
-        </div>
-
-        <!-- Invitation sentence -->
-        <p class="invitation-line">
-            Ont l’immense joie de vous faire part du mariage<br>
-            de leurs petits-enfants et enfants
-        </p>
-
-        <!-- Couple names -->
-        <h2 class="couple-names">TAMARA & SOLAL</h2>
-
-        <!-- Hebrew names -->
-        <p class="hebrew-names">שמענון משה    שיילה</p>
-
-        <!-- Ceremony line -->
-        <p class="invitation-line">
-            Et seront honorés de votre présence pour<br>
-            la cérémonie religieuse qui aura lieu
-        </p>
-
-        <!-- Date -->
-        <p class="ceremony-date">
-            Le 29 juillet 2026<br>
-            <span class="subtext">à 16h précises</span>
-        </p>
-
-        <!-- Location -->
-        <p class="ceremony-location">
-            Dans les jardins de la Villa Mondragone<br>
-            Via Frascati 51, 00040 Monte Porzio Catone, Rome, Italie
-        </p>
-
-        <p class="invitation-line mt-3">
-            La cérémonie sera suivie d’une réception
-        </p>
-
-        <!-- Doves + Rings -->
-        <div class="doves-img mx-auto">
-            <img src="{{ asset('assets/images/home/COLOMBES-ALLIANCES.png') }}" class="img-fluid" alt="">
-        </div>
-
-        <!-- Transport info -->
-        <p class="transport-text">
-            Des navettes vous attendront<br>
-            devant les 3 hôtels proposés par les mariés,<br>
-            à 15h précises
-        </p>
-
-    </div>
-</section>
-<section id="beach" class="beach-section sr-fade">
-    <div class="container">
-
-        <!-- Title -->
-        <h1 class="beach-title">LA DOLCE PYTEL </h1>
-        <p class="beach-subtitle">White party</p>
-
-        <!-- Illustration -->
-        <div class="beach-img mx-auto">
-            <img src="{{ asset('assets/images/home/party.png') }}" alt="" class="img-fluid">
-        </div>
-
-        <!-- Names -->
-        <h2 class="beach-names">TAMARA & SOLAL</h2>
-
-        <!-- Invitation -->
-        <p class="invite-line"> vous attendent pour une White party </p>
-
-        <!-- Date -->
-        <p class="beach-date">
-           Le jeudi 30 juillet 2026 <br>
-            <span class="subtext">À partir de 16h </span>
-        </p>
-
-        <!-- Location -->
-        <p class="beach-location">
-            à la mairie du XVIe arrondissement <br>
-            71 av. Henri Martin, 75116 
-        </p>
-
-        <!-- Palm trees -->
-        <div class="palm-img mx-auto">
-            <img src="{{ asset('assets/images/home/PALMIERS.png') }}" class="img-fluid" alt="">
-        </div>
-
-        <!-- Transport -->
-        <p class="transport-text">
-            Des navettes vous attendront<br>
-            devant les 3 hôtels proposés par les mariés,<br>
-            à 11h précises
-        </p>
-
-    </div>
-</section>
-<section id="hotels" class="hotels-section">
-    <div class="container text-center">
-        <!-- Heading -->
-        <h2 class="fw-bold">
-            VOTRE SÉJOUR
-        </h2>
-        <h5 class="mb-4">
-            Hôtels
-        </h5>
-
-        <!-- Key Image -->
-        <div class="my-4">
-            <img src="{{ asset('assets/images/home/clef.png') }}" class="img-fluid animate-img">
-        </div>
-
-        <!-- Intro Text -->
-        <p class="mb-5 intro-text">
-            Afin de vous faciliter l'organisation de votre séjour, 
-            les mariés ont le plaisir de vous partager trois hôtels dans 
-            lesquels des tarifs ont été négociés pour vous.
-        </p>
-
-        <!-- HOTEL 1 -->
-        <div class="mb-5">
-            <h4>MERCURE ROMA CORSO TRIESTE</h4>
-
-            <p class="text-muted mb-1">
-                Via Gradisca, 31, 00198 Rome, Italie
-            </p>
-
-            <a href="#">Vous pouvez télécharger le formulaire de réservation ici</a><br>
-            <small style="color:#6d6d55;">À renvoyer à l’adresse suivante : amanda.lambard@accor.com</small>
-
-            <p class="mt-3 mb-1" style="color:#6d6d55;">Pour plus d’informations sur l’hôtel :</p>
-            <a href="https://all.accor.com/hotel/3320/index.fr.shtml" class="btn rounded-pill px-4">Mercure Roma Corso Trieste</a>
-
-            <div class="hotel-emoji">🙂</div>
-        </div>
-
-        <!-- HOTEL 2 -->
-        <div class="mb-5">
-            <h4 style="text-decoration: underline;">THE HOXTON</h4>
-
-            <p class="text-muted mb-1">
-                Largo Benedetto Marcello, 220, 00198 Rome, Italie
-            </p>
-
-            <a href="#">Veuillez accéder à ce lien</a><br>
-            <small style="color:#6d6d55;">Utiliser le code d'accès suivant : AMB070923</small>
-
-            <p class="mt-3 mb-1" style="color:#6d6d55;">Pour plus d’informations sur l’hôtel :</p>
-            <a href="https://thehoxton.com/fr/italy/rome/" class="btn rounded-pill px-4">The Hoxton</a>
-
-            <div class="hotel-emoji">🙂</div>
-        </div>
-
-        <!-- HOTEL 3 -->
-        <div class="mb-5">
-            <h4>SOFITEL ROMA VILLA BORGHESE</h4>
-
-            <p class="text-muted mb-1">
-                Via Lombardia 47, 00187 Rome, Italie
-            </p>
-
-            <a href="#">Vous pouvez télécharger le formulaire de réservation ici</a><br>
-            <small style="color:#6d6d55;">À renvoyer à l’adresse suivante : h878-RE@sofitel.com</small>
-
-            <p class="mt-3 mb-1" style="color:#6d6d55;">Pour plus d’informations sur l’hôtel :</p>
-            <a href="https://www.sofitelrome.com/fr/" class="btn rounded-pill px-4">Sofitel Rome Villa Borghese</a>
-
-            <div class="hotel-emoji">🙂</div>
-        </div>
-    </div>
-</section>
-<section id="addresses" class="address-section" >
-    <div class="container text-center">
-
-        <h2 class="fw-light mb-1">VOTRE SÉJOUR</h2>
-        <p class="fst-italic mb-4">Les bonnes adresses d'Ambre et Jonathan</p>
-
-        <img src="{{asset('assets/images/home/pates.png')}}" 
-             class="img-fluid mb-4 animate-img" style="max-width:140px;">
-
-        <p class="text-muted mb-5" style="max-width:480px; margin:auto;">
-            Pour profiter pleinement de votre séjour, les mariés ont sélectionné quelques adresses à découvrir.
-        </p>
-
-        <div class="row justify-content-center">
-
-            <!-- Item -->
-            <div class="col-12 col-md-8 mb-5 address-item">
-                <h4>Gelateria La Romana</h4>
-                <p class="text-muted fst-italic mb-1">Glacier</p>
-                <p class="text-muted">Via Venti Settembre 60, 00187 Roma, Italie</p>
-                <a href="#" class="address-icon">🙂</a>
-            </div>
-
-            <!-- Item -->
-            <div class="col-12 col-md-8 mb-5 address-item">
-                <h4>Pompi Tiramisu</h4>
-                <p class="text-muted fst-italic mb-1">Boutique de desserts – Tiramisu</p>
-                <p class="text-muted">V. della Croce 82, 00187 Roma, Italie</p>
-                <a href="#" class="address-icon">🙂</a>
-            </div>
-
-            <!-- Item -->
-            <div class="col-12 col-md-8 mb-5 address-item">
-                <h4>Terrazza Borromini</h4>
-                <p class="text-muted fst-italic mb-1">Rooftop</p>
-                <p class="text-muted">Via di Santa Maria dell’Anima 30, 00186 Roma, Italie</p>
-                <a href="#" class="address-icon">🙂</a>
-            </div>
-
-            <!-- Item -->
-            <div class="col-12 col-md-8 mb-5 address-item">
-                <h4>Capo Boi</h4>
-                <p class="text-muted fst-italic mb-1">Restaurant de poissons</p>
-                <p class="text-muted">Via Arco 88, 00186 Roma, Italie</p>
-                <a href="#" class="address-icon">🙂</a>
-            </div>
-
-            <!-- Item -->
-            <div class="col-12 col-md-8 mb-5 address-item">
-                <h4>Trattoria Al Moro</h4>
-                <p class="text-muted fst-italic mb-1">Cuisine italienne</p>
-                <p class="text-muted">Vicolo delle Bollette 13, 00187 Roma, Italie</p>
-                <a href="#" class="address-icon">🙂</a>
-            </div>
-
-            <!-- Item -->
-            <div class="col-12 col-md-8 mb-5 address-item">
-                <h4>Trattoria Da Enzo al 29</h4>
-                <p class="text-muted fst-italic mb-1">Spécialités romaines</p>
-                <p class="text-muted">Via dei Vascellari 29, 00153 Roma, Italie</p>
-                <a href="#" class="address-icon">🙂</a>
-            </div>
-
-            <!-- Item -->
-            <div class="col-12 col-md-8 mb-5 address-item">
-                <h4>Baghetto Ristorante</h4>
-                <p class="text-muted fst-italic mb-1">Restaurant Kasher</p>
-                <p class="text-muted">Via del Portico D’Ottavia 3, 00186 Roma, Italie</p>
-                <a href="#" class="address-icon">🙂</a>
-            </div>
-
-            <!-- Item -->
-            <div class="col-12 col-md-8 mb-5 address-item">
-                <h4>Little Tripoli</h4>
-                <p class="text-muted fst-italic mb-1">Restaurant Kasher</p>
-                <p class="text-muted">Via Cernia 9, 00186 Roma RM, Italie</p>
-                <a href="#" class="address-icon">🙂</a>
-            </div>
-
-        </div>
-    </div>
-</section>
-<section id="presence" class="presence-section">
-    <div class="container text-center">
-        <!-- Title -->
-        <h2 class="fw-light mb-1">
-            CONFIRMEZ VOTRE<br>PRÉSENCE
-        </h2>
-        <p class="subtitle fst-italic">dès réception</p>
-        <!-- Doves Image -->
-        <img src="{{ asset('assets/images/home/COLOMBES-ENVELOPPE.png') }}"
-             class="img-fluid my-4 dove-img" alt="">
-
-        <!-- Form -->
-        <form action="{{ route('send.form.email') }}" method="POST" class="text-start mx-auto presence-form">
-                @csrf
-                <label class="presence-label">PRÉNOM</label>
-                <input type="text" name="prenom" class="form-control mb-3 presence-input">
-                <label class="presence-label">NOM</label>
-                <input type="text" name="nom" class="form-control mb-3 presence-input">
-                <label class="presence-label mt-3">LA MAIRIE</label><br>
-                <div class="mb-2">
-                    <label><input type="radio" name="mairie" value="Oui"> Oui</label>
-                    <label class="ms-3"><input type="radio" name="mairie" value="Non"> Non</label>
+            <!-- COUNTDOWN -->
+            <div class="d-flex justify-content-center gap-4 mt-3">
+                <div class="counter-box text-center">
+                    <div>00</div>
+                    <small>Days</small>
                 </div>
-                <label class="presence-label">NOMBRE DE PERSONNES À LA MAIRIE</label>
-                <input type="text" name="personnes_mairie" class="form-control mb-3 presence-input">
-                <label class="presence-label mt-3">LA BEACH PARTY</label><br>
-                <div class="mb-2">
-                    <label><input type="radio" name="beach" value="Oui"> Oui</label>
-                    <label class="ms-3"><input type="radio" name="beach" value="Non"> Non</label>
+                <div class="counter-box text-center">
+                    <div>00</div>
+                    <small>Hours</small>
                 </div>
-                <label class="presence-label">NOMBRE DE PERSONNES À LA BEACH PARTY</label>
-                <input type="text" name="personnes_beach" class="form-control mb-3 presence-input">
-                <label class="presence-label mt-3">LA HOUPPA & RÉCEPTION</label><br>
-                <div class="mb-2">
-                    <label><input type="radio" name="houppa" value="Oui"> Oui</label>
-                    <label class="ms-3"><input type="radio" name="houppa" value="Non"> Non</label>
+                <div class="counter-box text-center">
+                    <div>00</div>
+                    <small>Minutes</small>
                 </div>
-                <label class="presence-label">NOMBRE DE PERSONNES À LA HOUPPA</label>
-                <input type="text" name="personnes_houppa" class="form-control mb-3 presence-input">
-                <p class="small-note fst-italic mt-4 mb-2">
-                    Afin de vous faciliter les trajets, merci de sélectionner votre hôtel
-                </p>
-                <div class="ms-2 mb-3 hotel-list">
-                    <label class="d-block"><input type="radio" name="hotel" value="Mercure Roma Corso Trieste"> Mercure Roma Corso Trieste</label>
-                    <label class="d-block"><input type="radio" name="hotel" value="The Hoxton"> The Hoxton</label>
-                    <label class="d-block"><input type="radio" name="hotel" value="Sofitel Rome Villa Borghese"> Sofitel Rome Villa Borghese</label>
-                    <label class="d-block"><input type="radio" name="hotel" value="Autre"> Autre</label>
+                <div class="counter-box text-center">
+                    <div>00</div>
+                    <small>Seconds</small>
                 </div>
-                <label class="presence-label">MESSAGE AUX MARIÉS</label>
-                <textarea name="message_maries" class="form-control mb-4 presence-textarea" rows="4"></textarea>
-                <div class="text-center">
-                    <button type="submit" class="presence-btn">Envoyer</button>
-                </div>
-            </form>
+            </div>
+
+        </div>
+
+        <!-- BUTTON -->
+        <a href="{{ url('/home') }}" class="btn btn-programme">Programme</a>
+
     </div>
 </section>
+<script>
+    // Event starts on July 29, 2026 at 00:00
+    const eventDate = new Date("2026-07-29T00:00:00").getTime();
 
-@endsection
+    function updateCountdown() {
+        const now = new Date().getTime();
+        let distance = eventDate - now;
+
+        if (distance < 0) distance = 0;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const box = document.querySelectorAll(".counter-box");
+
+        box[0].querySelector("div").innerText = days.toString().padStart(2, "0");
+        box[1].querySelector("div").innerText = hours.toString().padStart(2, "0");
+        box[2].querySelector("div").innerText = minutes.toString().padStart(2, "0");
+        box[3].querySelector("div").innerText = seconds.toString().padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+</script>
+<script>
+window.addEventListener('load', function () {
+    const audio = document.getElementById("bg-music");
+
+    setTimeout(() => {
+        audio.muted = false;
+        audio.currentTime = 3; // Start from 3 seconds
+        audio.play().catch(() => {});
+    }, 2000); // Delay playback by 2 seconds
+});
+</script>
+
+</body>
+</html>

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ladolcepytel.ts.</title>
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/main-image/logo.png') }}">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,6 +14,13 @@
             margin: 0;
             padding: 0;
         }
+        @font-face {
+        font-family: 'Artis-Swing';
+        src: url('{{ asset("assets/font/artis-swing-extralight/Artis-Swing Extralight/Artis-Swing Extralight.otf") }}') format("truetype");
+        font-weight: normal;
+        font-style: normal;
+    }
+
     </style>
 
     @yield('css')
