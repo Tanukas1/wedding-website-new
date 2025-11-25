@@ -88,7 +88,7 @@
     });
     </script>
 
-    <script>
+   <script>
     // Event: 29 July 2026
     const weddingDate = new Date("2026-07-29T00:00:00").getTime();
 
@@ -101,17 +101,22 @@
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-        const divs = document.querySelector(".timer").querySelectorAll("div");
+        // 🔥 FIX: Update BOTH timers
+        document.querySelectorAll(".timer").forEach(timer => {
+            const divs = timer.querySelectorAll("div");
 
-        divs[0].innerHTML = days.toString().padStart(2, "0") + "<br><span>Days</span>";
-        divs[1].innerHTML = hours.toString().padStart(2, "0") + "<br><span>Hours</span>";
-        divs[2].innerHTML = minutes.toString().padStart(2, "0") + "<br><span>Minutes</span>";
+            divs[0].innerHTML = days.toString().padStart(2, "0") + "<br><span>Days</span>";
+            divs[1].innerHTML = hours.toString().padStart(2, "0") + "<br><span>Hours</span>";
+            divs[2].innerHTML = minutes.toString().padStart(2, "0") + "<br><span>Minutes</span>";
+            divs[3].innerHTML = seconds.toString().padStart(2, "0") + "<br><span>Seconds</span>";
+        });
     }
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
-    </script>
+</script>
 
     <!-- ✅ MOBILE AUTOPLAY FIX -->
     <script>

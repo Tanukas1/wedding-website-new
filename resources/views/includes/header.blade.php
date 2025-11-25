@@ -11,6 +11,7 @@
         <div>00<br><span>Days</span></div>
         <div>00<br><span>Hours</span></div>
         <div>00<br><span>Minutes</span></div>
+        <div>00<br><span>Seconds</span></div>
     </div>
 
     <div class="menu-toggle" onclick="toggleMenu()">≡</div>
@@ -27,6 +28,7 @@
             <div>00<br><span>Days</span></div>
             <div>00<br><span>Hours</span></div>
             <div>00<br><span>Minutes</span></div>
+            <div>00<br><span>Seconds</span></div>
         </div>
 
         <div class="close-btn" onclick="toggleMenu()">×</div>
