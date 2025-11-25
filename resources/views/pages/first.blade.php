@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ladolcepytel.ts.</title>
 
+    <!-- Google Script Font (Great Vibes) -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
     <!-- PRELOAD IMAGE -->
     <link rel="preload" as="image" href="{{ asset('/assets/images/main-image/frame-home.jpg') }}">
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+   
 
     <style>
         html, body {
@@ -19,67 +23,77 @@
             height: 100%;
             font-family: "Georgia", serif;
         }
-
+            @font-face {
+                    font-family: 'Artis-Swing';
+                    src: url('{{ asset("assets/font/artis-swing-extralight/Artis-Swing Extralight/Artis-Swing Extralight.otf") }}') format("truetype");
+                    font-weight: normal;
+                    font-style: normal;
+                }
         /* MAIN HERO SECTION */
         .welcome-section {
             background-image: url("{{ asset('assets/images/main-image/frame-home.jpg') }}");
-            background-position: center center;
+            background-position: center;
             background-repeat: no-repeat;
-            background-size: cover; 
+            background-size: cover;
             min-height: 100vh;
             text-align: center;
 
             display: flex;
             justify-content: center;
             align-items: center;
-
             padding: 0;
-            color: #4d522e;
         }
 
-        /* CONTENT BLOCK */
         .content-wrapper {
             width: 100%;
             max-width: 600px;
-            color: #4d522e;
         }
 
-        /* TEXT BLOCK (moves text only) */
+        /* TEXT */
         .text-block {
-            padding-top: 25px; /* ← Adjust text up/down HERE */
+            margin-top: -40px; /* Move text higher */
         }
 
         .couple-name {
-            font-size: 32px;
+            font-family: 'Artis-Swing', cursive;
+            font-size: 42px;
             font-weight: 500;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
+            color: #800020; /* Burgundy */
         }
 
+
         .date-place {
-            font-size: 18px;
+            font-size: 20px;
             font-style: italic;
+            color: #4d4d4d;
+            line-height: 1.7;
         }
 
         .counter-box div {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
         }
 
-        /* BUTTON (moves button only) */
         .btn-programme {
             background-color: #575f2d;
             color: #fff;
             padding: 10px 30px;
             border-radius: 5px;
             font-size: 18px;
-            margin-top: 271px; /* ← Adjust button position independently */
+            margin-top: 260px; /* Button position */
         }
 
         .btn-programme:hover {
             background-color: #474e25;
-            color:#fff;
+            color: #fff;
         }
+        .counter-box div {
+            font-size: 22px;
+            font-weight: 400;
+            font-family: 'Cinzel Decorative', serif;
+        }
+
     </style>
 </head>
 
@@ -88,16 +102,16 @@
 <section class="welcome-section">
     <div class="content-wrapper">
 
-        <!-- TEXT BLOCK -->
+        <!-- TEXT AREA -->
         <div class="text-block">
-
-            <div class="couple-name">TAMARA & SOLAL</div>
+            <div class="couple-name">Tamara & Solal</div>
 
             <div class="date-place">
-                Mercredi 1er juillet 2026<br>
-                À 15h précises
+                July 29–30, 2026<br>
+                Rome, Italy
             </div>
 
+            <!-- COUNTDOWN -->
             <div class="d-flex justify-content-center gap-4 mt-3">
                 <div class="counter-box text-center">
                     <div>00</div>
@@ -112,20 +126,17 @@
                     <small>Minutes</small>
                 </div>
             </div>
-
         </div>
-        <!-- END TEXT BLOCK -->
 
-        <!-- BUTTON OUTSIDE TEXT-BLOCK (independent movement) -->
+        <!-- BUTTON -->
         <a href="{{ url('/index') }}" class="btn btn-programme">Programme</a>
 
     </div>
 </section>
 
-</body>
-
 <script>
-    const eventDate = new Date("2026-07-01T15:00:00").getTime();
+    // Event starts on July 29, 2026 at 00:00
+    const eventDate = new Date("2026-07-29T00:00:00").getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
@@ -137,16 +148,16 @@
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-        const counterBoxes = document.querySelectorAll(".counter-box");
-        if (counterBoxes.length === 3) {
-            counterBoxes[0].querySelector("div").innerText = days.toString().padStart(2, "0");
-            counterBoxes[1].querySelector("div").innerText = hours.toString().padStart(2, "0");
-            counterBoxes[2].querySelector("div").innerText = minutes.toString().padStart(2, "0");
-        }
+        const box = document.querySelectorAll(".counter-box");
+
+        box[0].querySelector("div").innerText = days.toString().padStart(2, "0");
+        box[1].querySelector("div").innerText = hours.toString().padStart(2, "0");
+        box[2].querySelector("div").innerText = minutes.toString().padStart(2, "0");
     }
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
 </script>
 
+</body>
 </html>
