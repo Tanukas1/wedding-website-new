@@ -1,276 +1,247 @@
-/* header */
 .top-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;  
-      background: #d3d9a3;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-  }
-/* LACE FRAME AROUND TIMER */
-   .timer-lace {
-    background-image: url("../images/home//border.jpeg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    backdrop-filter: none;
-    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;  
+    background: #FFFFF0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
+.timer-lace {
+    background: none;
+}
 
-  /* TIMER 3 LINE FORMAT */
-    .timer {
-        display: flex;
-        gap: 10px;
-        text-align: center;
-        font-size: 12px;
-        letter-spacing: 1px;
-        font-family: 'Cinzel Decorative', serif;
-    }
-
-    .timer div {
-        display: flex;
-        flex-direction: column;
-        line-height: 14px;
-        font-weight: bold;
-    }
-
-  /* RIGHT BUTTON (hamburger + cross) */
-  .menu-toggle, .close-btn {
-      width: 38px;
-      height: 38px;
-      background: #fff;
-      border: 2px solid #000;
-      border-radius: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 20px;
-      cursor: pointer;
-  }
-
-  /* OVERLAY MENU */
-  .overlay-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #d3d9a3;
-      z-index: 2000;
-      display: none;
-      flex-direction: column;
-      align-items: center;
-  }
-  .overlay-menu.open {
-      display: flex;
-  }
-
-  /* SAME TOPBAR INSIDE MENU */
-  .overlay-top {
-      width: 100%;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #d3d9a3;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-  }
-
-  .menu-content {
-      margin-top: 0px;
-      width: 100%;
-      max-width: 300px;
-      text-align: center;
-  }
-
-  .menu-links {
-      list-style: none;
-      padding: 0;
-      margin-top: 20px;
-  }
-
-  .menu-links li {
-      border-top: 1px solid rgba(0,0,0,0.15);
-  }
-  /* Remove top border from first menu item */
-    .menu-links li:first-child {
-        border-top: none !important;
-    }
-
-
-  .menu-links a {
-      display: block;
-      padding: 18px 0;
-      text-transform: uppercase;
-      color: #515732;
-      text-decoration: none;
-      font-size: 16px;
-      letter-spacing: 1px;
-  }
-
-  .menu-links a:hover {
-      color: #2d3020;
-  }
-
-  body.menu-open {
-      overflow: hidden;
-  }
-
-/* ================= GENERAL SECTIONS ================= */
-.mairie-section {
-    min-height: 100vh;
-    padding: 60px 0px 30px 0px;
+.timer {
+    display: flex;
+    gap: 10px;
     text-align: center;
-    background-color: #faf9f6;
-    font-family: 'Georgia', serif;
-}
-
-.hebrew-text {
-    font-size: 16px;
-    color: #556032;
-    margin-top: 10px;
-}
-
-.mairie-title {
-    font-size: 40px;
-    letter-spacing: 2px;
-    color: #556032;
-    font-weight: 500;
-    margin: 20px 0 25px;
-    font-family: 'Times New Roman', serif;
-}
-
-.mairie-img img {
-    width: 350px;
-    margin-bottom: 25px;
-}
-
-.couple-names {
-    font-family: 'Artis-Swing', cursive;
-    font-size: 42px;
-    font-weight: 500;
-    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Cinzel Decorative', serif;
     color: #800020;
 }
 
-.small-text {
-    font-size: 18px;
-    color: #444;
-    margin-bottom: 8px;
+.timer div {
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    font-weight: 400;
 }
 
-.oui-text {
-    font-size: 32px;
-    font-style: italic;
-    color: #556032;
-    margin-bottom: 25px;
-}
-
-.event-date {
-    font-size: 22px;
-    color: #556032;
-}
-
-.event-date .sub-text {
-    font-size: 18px;
-}
-
-.address {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #556032;
-    line-height: 1.6;
-}
-
-.flower-img img {
-    width: 350px;
-    margin-top: 25px;
-}
-
-@media (min-width: 768px) {
-    .mairie-title { font-size: 48px; }
-    .couple-names { font-size: 32px; }
-    .oui-text { font-size: 40px; }
-    .mairie-img img { width: 320px; }
-    .flower-img img { width: 180px; }
-}
-
-/* ================= BEACH SECTION ================= */
-.beach-section {
-    min-height: 100vh;
-    padding: 20px 0px 40px 0px;
-    text-align: center;
-    background-color: #faf9f6;
-    font-family: 'Georgia', serif;
-    color: #556032;
-}
-
-.beach-title {
-    font-size: 38px;
-    font-family: 'Times New Roman', serif;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-}
-
-.beach-subtitle {
+.menu-toggle, .close-btn {
+    width: 38px;
+    height: 38px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
-    font-style: italic;
-    margin-bottom: 25px;
+    cursor: pointer;
+}
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #d3d9a3;
+    z-index: 2000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
 }
 
-.beach-img img {
-    width: 350px;
-    margin-bottom: 25px;
+.overlay-menu.open {
+    display: flex;
 }
 
-.beach-names {
-    font-size: 28px;
+.overlay-top {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d3d9a3;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.menu-content {
+    margin-top: 0px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.menu-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.menu-links li {
+    border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+/* Remove top border from first menu item */
+.menu-links li:first-child {
+    border-top: none !important;
+}
+
+.menu-links a {
+    display: block;
+    padding: 18px 0;
+    text-transform: uppercase;
+    color: #515732;
+    text-decoration: none;
+    font-size: 16px;
     letter-spacing: 1px;
-    margin: 10px 0;
-    color: #556032;
 }
 
-.invite-line {
-    font-size: 19px;
-    color: #444;
-    margin-bottom: 20px;
+.menu-links a:hover {
+    color: #2d3020;
 }
 
-.beach-date {
-    font-size: 22px;
-    margin-bottom: 20px;
+/* BODY FIX WHEN MENU OPEN */
+body.menu-open {
+    overflow: hidden;
 }
 
-.beach-date .subtext {
-    font-size: 18px;
+/* ================= GENERAL SECTIONS ================= */
+.mairie-img {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
 }
 
-.beach-location {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 25px;
+.mairie-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+    padding-top: 60px !important; 
 }
 
-.palm-img img {
-    width: 200px;
-    margin: 10px auto;
+/* Overlay Text */
+.text-overlay {
+    position: absolute;
+    top: 38%;  /* KEEP mobile look */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #800020;
+    width: 90%;
 }
 
-.transport-text {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-top: 10px;
+/* Text Styles */
+.text-overlay .mairie-title {
+    font-style: italic;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.text-overlay .couple-names {
+    font-family: 'Artis-Swing', cursive;
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #800020;
+}
+
+.text-overlay .small-text {
+    font-size: 16px;
+    color: #800020;
+}
+
+.text-overlay .oui-text {
+    font-size: 30px;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.text-overlay .event-date {
+    font-size: 16px;
+    font-style: italic;
+    color: #800020;
+}
+
+.text-overlay .event-date .sub-text {
+    font-size: 16px;
+}
+.text-overlay .address {
+    font-size: 16px;
+    font-style: italic;
+    color: #800020;
+}
+
+.text-overlay .address .sub-text {
+    font-size: 14px;
+}
+
+/* TABLET VIEW */
+@media (min-width: 576px) {
+    .text-overlay .mairie-title { font-size: 40px; }
+    .text-overlay .couple-names { font-size: 38px; }
+    .text-overlay .oui-text { font-size: 28px; }
+    .text-overlay .event-date { font-size: 18px; }
+    .text-overlay .address { font-size: 18px; }
 }
 
 @media (min-width: 768px) {
-    .beach-title { font-size: 48px; }
-    .beach-img img { width: 320px; }
-    .palm-img img { width: 160px; }
+    .text-overlay .mairie-title { font-size: 46px; }
+    .text-overlay .couple-names { font-size: 42px; }
+    .text-overlay .oui-text { font-size: 32px; }
+    .text-overlay .event-date { font-size: 20px; }
+    .text-overlay .address { font-size: 20px; }
 }
+
+/* ✅ DESKTOP FIX (min-width 992px) */
+@media (min-width: 992px) {
+    .mairie-img {
+        max-width: 1000px;
+    }
+
+    .mairie-img img {
+        padding-top: 60px !important;  
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    .text-overlay {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+
+    .text-overlay .mairie-title {
+        font-size: 56px;
+        line-height: 1.2;
+    }
+
+    .text-overlay .couple-names {
+        font-size: 48px;
+        line-height: 1.2;
+    }
+
+    .text-overlay .oui-text {
+        font-size: 48px;
+        margin: 10px 0;
+    }
+
+    .text-overlay .event-date {
+        font-size: 26px;
+    }
+    .text-overlay .address {
+        font-size: 26px;
+    }
+}
+
 
 /* ================= HOUPPA SECTION ================= */
 .houppa-section {

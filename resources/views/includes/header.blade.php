@@ -15,7 +15,6 @@
     <div class="menu-toggle" onclick="toggleMenu()">≡</div>
 </div>
 
-
 <!-- ================= OVERLAY MENU ================= -->
 <div id="overlayMenu" class="overlay-menu">
 

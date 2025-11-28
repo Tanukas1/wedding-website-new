@@ -2,43 +2,33 @@
 
 @section('content')
 <!-- ================= SAMPLE SECTIONS ================= -->
-<section id="mairie" class="mairie-section">
-    <div class="container">
+<div id="mairie" class="mairie-img mx-auto position-relative">
+    <picture>
+        <source media="(min-width: 992px)" srcset="{{ asset('assets/images/home/first-image-desktop.jpg') }}">
+        <img src="{{ asset('assets/images/home/first-image-mobile.jpg') }}" alt="Mairie Illustration" class="img-fluid">
+    </picture>
 
-        <!-- Top Hebrew small text -->
-        <p class="text-end hebrew-text">בס״ד</p>
-
-        <!-- Main Heading -->
+    <!-- Text Overlay inside image container -->
+    <div class="text-overlay">
         <h1 class="mairie-title">LA MAIRIE</h1>
-
-        <!-- Illustration -->
-        <div class="mairie-img mx-auto">
-            <img src="{{ asset('assets/images/home/Car-view.jpg') }}" alt="Mairie Illustration" class="img-fluid">
-        </div>
-
-        <!-- Names -->
         <h2 class="couple-names">TAMARA & SOLAL</h2>
         <p class="small-text">se diront</p>
         <h3 class="oui-text">“ Oui ”</h3>
-
-        <!-- Event details -->
         <p class="event-date">
-           Le mercredi 1 er juillet 2026 <br>
-            <span class="sub-text">À 15h précises </span>
+            le Mercredi 1er juillet 2026<br>
+            <span class="sub-text"> à 15h30</span>
         </p>
-
         <p class="address">
-            à la mairie du XVIe arrondissement <br>
-            71 av. Henri Martin, 75116 
-        </p>
-
-        <!-- Bottom floral image -->
-        <div class="flower-img mx-auto">
-            <img src="{{ asset('assets\images\home\Tawn-Hall.jpg') }}" alt="Flowers" class="img-fluid">
-        </div>
-
+           à la mairie du XVIe arrondissement <br>
+            <span class="sub-text"> 71 av. Henri Martin, 75116  </span> 
+        </p> 
+       
     </div>
-</section>
+</div>
+
+ <div class="flower-img mx-auto mt-2">
+    <img src="{{ asset('assets/images/home/Tawn-Hall.jpg') }}" alt="Flowers" class="img-fluid">
+</div>
 <section id="houppa" class="houppa-section">
     <div class="container">
 

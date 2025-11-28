@@ -48,7 +48,20 @@
     /* DESKTOP BACKGROUND IMAGE */
     @media (min-width: 992px) {
         .welcome-section {
-            background-image: url("{{ asset('assets/images/main-image/frame-home-desktop.jpg') }}");
+            background-image: url('http://127.0.0.1:8000/assets/images/main-image/frame-home-desktop.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            aspect-ratio: 16 / 9;   /* Force 1920×1080 shape */
+            padding: 0;
+        }
+        .btn-programme {
+            margin-top: 323px !important; /* Keep it below the text */
+        }
+
+        /* Adjust text-block vertical alignment if needed */
+        .text-block {
+            margin-top: 0; /* Reset mobile negative margin */
         }
     }
 
@@ -100,6 +113,7 @@
         background-color: #800020;
         color: #fff;
     }
+  
 </style>
 
 </head>
