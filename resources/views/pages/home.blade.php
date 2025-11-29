@@ -25,25 +25,16 @@
        
     </div>
 </div>
-
+<!-- 
  <div class="flower-img mx-auto mt-2">
     <img src="{{ asset('assets/images/home/Tawn-Hall.jpg') }}" alt="Flowers" class="img-fluid">
-</div>
-<section id="houppa" class="houppa-section">
-    <div class="container">
+</div> -->
+<div id="houppa" class="houppa-overlay-wrapper">
+    <img src="{{ asset('assets/images/home/Stage-new.jpg') }}" alt="" class="img-fluid overlay-img">
 
-        <!-- Small Hebrew text -->
+    <div class="houppa-overlay-content">
         <p class="text-end hebrew-top">בס״ד</p>
-
-        <!-- Title -->
         <h1 class="houppa-title">HOUPPA & RÉCEPTION</h1>
-
-        <!-- Illustration -->
-        <div class="houppa-img mx-auto">
-            <img src="{{ asset('assets/images/home/Stage.jpg') }}" alt="" class="img-fluid">
-        </div>
-
-        <!-- Parents Names Row -->
         <div class="row justify-content-center parents-row">
 
             <div class="col-md-4">
@@ -64,31 +55,20 @@
 
         </div>
 
-        <!-- Invitation sentence -->
         <p class="invitation-line">
             Ont l’immense joie de vous faire part du mariage<br>
             de leurs petits-enfants et enfants
         </p>
-
-        <!-- Couple names -->
         <h2 class="couple-names">TAMARA & SOLAL</h2>
-
-        <!-- Hebrew names -->
         <p class="hebrew-names">שמענון משה    שיילה</p>
-
-        <!-- Ceremony line -->
         <p class="invitation-line">
             Et seront honorés de votre présence pour<br>
             la cérémonie religieuse qui aura lieu
         </p>
-
-        <!-- Date -->
         <p class="ceremony-date">
             Le 29 juillet 2026<br>
             <span class="subtext">à 16h précises</span>
         </p>
-
-        <!-- Location -->
         <p class="ceremony-location">
             Dans les jardins de la Villa Mondragone<br>
             Via Frascati 51, 00040 Monte Porzio Catone, Rome, Italie
@@ -97,21 +77,15 @@
         <p class="invitation-line mt-3">
             La cérémonie sera suivie d’une réception
         </p>
-
-        <!-- Doves + Rings -->
-        <div class="doves-img mx-auto">
-            <img src="{{ asset('assets/images/home/COLOMBES-ALLIANCES.png') }}" class="img-fluid" alt="">
-        </div>
-
-        <!-- Transport info -->
+      <img src="{{ asset('assets/images/home/ring.png') }}" class="ring-img" alt="Ring Image">
         <p class="transport-text">
             Des navettes vous attendront<br>
             devant les 3 hôtels proposés par les mariés,<br>
             à 15h précises
         </p>
-
     </div>
-</section>
+</div>
+
 <section id="beach" class="beach-section sr-fade">
     <div class="container">
 
