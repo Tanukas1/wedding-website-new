@@ -4,8 +4,8 @@
 <!-- ================= SAMPLE SECTIONS ================= -->
 <div id="mairie" class="mairie-img mx-auto position-relative">
     <picture>
-        <source media="(min-width: 992px)" srcset="{{ asset('assets/images/home/first-image-desktop.jpg') }}">
-        <img src="{{ asset('assets/images/home/first-image-mobile.jpg') }}" alt="Mairie Illustration" class="img-fluid">
+        <source media="(min-width: 992px)" srcset="{{ asset('assets/images/home/new/first-image-desktop.jpg') }}">
+        <img src="{{ asset('assets/images/home/new/first-image-mobile.jpg') }}" alt="Mairie Illustration" class="img-fluid">
     </picture>
 
     <!-- Text Overlay inside image container -->
@@ -30,13 +30,14 @@
     <img src="{{ asset('assets/images/home/Tawn-Hall.jpg') }}" alt="Flowers" class="img-fluid">
 </div> -->
 <div id="houppa" class="houppa-overlay-wrapper">
-    <img src="{{ asset('assets/images/home/Stage-new.jpg') }}" alt="" class="img-fluid overlay-img">
+     <p class="text-end hebrew-top">בס״ד</p>
+     <h1 class="houppa-title">HOUPPA & RÉCEPTION</h1>
+    <img src="{{ asset('assets/images/home/new/reception-desktop.jpg') }}" alt="" class="img-fluid overlay-img">
 
     <div class="houppa-overlay-content">
-        <p class="text-end hebrew-top">בס״ד</p>
-        <h1 class="houppa-title">HOUPPA & RÉCEPTION</h1>
-        <div class="row justify-content-center parents-row">
+       
 
+        <div class="row justify-content-center parents-row">
             <div class="col-md-4">
                 <p class="parents-block">
                     Liliane et Jacob Fayer<br>
@@ -52,23 +53,27 @@
                     Laurence et Jérôme Benhamou
                 </p>
             </div>
-
         </div>
 
         <p class="invitation-line">
             Ont l’immense joie de vous faire part du mariage<br>
             de leurs petits-enfants et enfants
         </p>
+
         <h2 class="couple-names">TAMARA & SOLAL</h2>
+
         <p class="hebrew-names">שמענון משה    שיילה</p>
+
         <p class="invitation-line">
             Et seront honorés de votre présence pour<br>
             la cérémonie religieuse qui aura lieu
         </p>
+
         <p class="ceremony-date">
             Le 29 juillet 2026<br>
             <span class="subtext">à 16h précises</span>
         </p>
+
         <p class="ceremony-location">
             Dans les jardins de la Villa Mondragone<br>
             Via Frascati 51, 00040 Monte Porzio Catone, Rome, Italie
@@ -77,7 +82,9 @@
         <p class="invitation-line mt-3">
             La cérémonie sera suivie d’une réception
         </p>
-      <img src="{{ asset('assets/images/home/ring.png') }}" class="ring-img" alt="Ring Image">
+
+        <img src="{{ asset('assets/images/home/ring.png') }}" class="ring-img" alt="Ring Image">
+
         <p class="transport-text">
             Des navettes vous attendront<br>
             devant les 3 hôtels proposés par les mariés,<br>
@@ -85,6 +92,7 @@
         </p>
     </div>
 </div>
+
 
 <section id="beach" class="beach-section sr-fade">
     <div class="container">
