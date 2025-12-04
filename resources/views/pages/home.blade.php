@@ -26,55 +26,66 @@
     </div>
 </div>
 <div id="houppa" class="houppa-overlay-wrapper">
-     <p class="text-end hebrew-top">בס״ד</p>
-     <h1 class="houppa-title">HOUPPA & RÉCEPTION</h1>
+    <p class="text-end hebrew-top">בס״ד</p>
+
+    <h1 class="houppa-title">HOUPPA & RÉCEPTION</h1>
+
     <img src="{{ asset('assets/images/home/new/ring.png') }}" alt="" class="img-fluid overlay-img">
 
     <div class="houppa-overlay-content">
+
+        <!-- Parents Left & Right -->
         <div class="row justify-content-center parents-row">
-            <div class="col-md-4">
+            <div class="col-md-4 text-start parents-left">
                 <p class="parents-block">
-                    Liliane et Jacob Fayer<br>
-                    Martine et Salomon Taïeb<br>
-                    Elsa Hanoun Fayer et Thierry Fayer
+                    Sophie and Eric Uzan<br>
+                    Ida and Félix Uzan<br>
                 </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 text-end parents-right">
                 <p class="parents-block">
-                    Liliane et Simon Benhamou<br>
-                    Paulette et Maurice Temstet<br>
-                    Laurence et Jérôme Benhamou
+                    Marie-Pierre Benitah and <br>
+                    Olivier Pytel Fanny Pytel<br>
                 </p>
             </div>
         </div>
-        <p class="invitation-line">
-            Ont l’immense joie de vous faire part du mariage<br>
+
+        <p class="invitation-line italic-line">
+            Et avec l’amour de nos grands parents :<br>
+            Tamara et Georges Lévy Z’’L, Mady et Félix Benitah Z’’L, Max Pytel Z’’L
+        </p>
+
+        <p class="invitation-line italic-line">
+            Ont l’immense joie de vous faire-part du mariage<br>
             de leurs petits-enfants et enfants
         </p>
+
+        <!-- Couple Names (unchanged font) -->
         <h2 class="couple-names">TAMARA & SOLAL</h2>
         <p class="hebrew-names">שמענון משה    שיילה</p>
-        <p class="invitation-line">
+
+        <p class="invitation-line italic-line">
             Et seront honorés de votre présence pour<br>
             la cérémonie religieuse qui aura lieu
         </p>
-        <p class="ceremony-date">
-            Le 29 juillet 2026<br>
+
+        <p class="ceremony-date highlighted-date">
+            Le Mardi 29 Juillet 2026<br>
             <span class="subtext">à 16h précises</span>
         </p>
-        <p class="ceremony-location">
+
+        <p class="ceremony-location italic-line">
             Dans les jardins de la Villa Mondragone<br>
             Via Frascati 51, 00040 Monte Porzio Catone, Rome, Italie
         </p>
-        <p class="invitation-line mt-3">
-            La cérémonie sera suivie d’une réception
+
+        <p class="invitation-line italic-line mt-3">
+            La cérémonie sera suivie d’une réception.
         </p>
-        <p class="transport-text">
-            Des navettes vous attendront<br>
-            devant les 3 hôtels proposés par les mariés,<br>
-            à 15h précises
-        </p>
+
     </div>
 </div>
+
 <section id="beach" class="beach-section sr-fade">
     <div class="overlay-text">
         <h1 class="beach-title">LA DOLCE PYTEL</h1>

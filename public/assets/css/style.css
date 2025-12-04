@@ -147,7 +147,7 @@ body.menu-open {
 
 .text-overlay .couple-names {
     font-family: 'Artis-Swing', cursive;
-    font-size: 38px;
+    font-size: 35px;
     font-weight: 500;
     margin-bottom: 10px;
     color: #800020;
@@ -239,136 +239,132 @@ body.menu-open {
 }
 /* ================= HOUPPA SECTION ================= */
 .houppa-overlay-wrapper {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center; 
-        padding: 30px 0;
-    color: #800020;
+    padding: 30px 10px;
     background: #f7f7f7;
-
+    text-align: center;
+    color: #800020;
+    font-family: "Times New Roman", serif;
 }
 
+/* SMALL TOP HEBREW */
+.hebrew-top {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* TITLE */
 .houppa-title {
-    font-size: 20px;
-    margin: 12px 0 15px 0;
-    text-align: center; 
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-family: 'Artis-Swing', cursive;
 }
 
 .overlay-img {
-    width: 100%;
+    width: 150px !important;
     height: auto;
-    display: block;
-    border-radius: 12px;
-    object-fit: cover;
-    margin-bottom: 20px; 
+    margin: 5px auto 15px auto !important;
 }
 
-.houppa-overlay-content {
-    position: relative;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
+.parents-block {
+    font-size: 14px;
+    line-height: 1.4;
     color: #800020;
-    margin-top: 0; 
+    font-family: "Times New Roman", serif;
 }
+
+.parents-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.parents-left,
+.parents-right {
+    width: 50%;
+}
+
+.parents-left {
+    text-align: left !important;
+}
+
+.parents-right {
+    text-align: right !important;
+}
+
+/* ITALIC LINES */
+.italic-line {
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.5;
+
+}
+
+/* COUPLE NAMES */
+.couple-names {
+    font-family: 'Artis-Swing', cursive;
+    font-size: 36px;
+    margin: 15px 0 5px;
+}
+
+/* HEBREW NAMES */
+.hebrew-names {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* DATE HIGHLIGHT */
+.highlighted-date {
+    font-size: 20px;
+    color: #800020;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* LOCATION */
+.ceremony-location {
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* MOBILE VIEW — KEEP SAME 2 COLUMN STRUCTURE */
 @media (max-width: 575.98px) {
 
     .houppa-title {
-        font-family: 'Artis-Swing', cursive;
+        font-size: 28px;
+    }
+
+    /* FORCE SIDE BY SIDE ON MOBILE TOO */
+    .parents-row {
+        display: flex !important;
+        flex-direction: row !important;
+        margin-bottom: 15px;
+    }
+
+    .parents-left,
+    .parents-right {
+        width: 50% !important;
+        text-align: left !important;
+    }
+
+    .parents-right {
+        text-align: right !important;
+    }
+
+    .parents-block {
+        font-size: 13px;
+    }
+
+    .couple-names {
         font-size: 30px;
-        margin: 20px 0;
-        color:#800020;
     }
 
-    .overlay-img {
-        object-fit: contain !important;
-        margin-top: 15px;
-    }
-
-    .houppa-overlay-content {
-        padding: 20px 10px;
-        margin-top: 10px;
+    .highlighted-date {
+        font-size: 18px;
     }
 }
-.parents-block {
-    font-size: 12px;
-    line-height: 1.3;
-}
-
-.invitation-line {
-    font-size: 12px;
-    margin: 2px 0;
-}
-
-.couple-names {
-    font-family: 'Artis-Swing', cursive;
-    font-size: 30px;
-    margin: 10px 0;
-}
-
-.hebrew-top,
-.hebrew-names {
-    font-size: 14px;
-    font-weight: bold;
-    color:#800020;
-}
-
-.ceremony-date,
-.ceremony-location,
-.transport-text {
-    font-size: 14px;
-    line-height: 1.3;
-}
 
 
-/* TABLET (576px) */
-@media (min-width: 576px) {
-    .houppa-title { font-size: 32px; }
-    .parents-block { font-size: 15px; }
-    .couple-names { font-size: 36px; }
-}
-
-
-/* TABLET LANDSCAPE (768px) */
-@media (min-width: 768px) {
-
-    .houppa-title { font-size: 38px; }
-    .parents-block { font-size: 16px; }
-    .invitation-line { font-size: 16px; }
-    .ceremony-date,
-    .ceremony-location,
-    .transport-text { font-size: 16px; }
-}
-
-
-/* DESKTOP (992px) — EVERYTHING IN ORDER */
-@media (min-width: 992px) {
-
-    .houppa-title {
-        font-family: 'Artis-Swing', cursive;
-        font-size: 45px;
-        margin: 20px 0;
-        color:#800020;
-    }
-
-    .overlay-img {
-        object-fit: contain !important;
-        height: auto;
-        margin-bottom: 30px; /* Perfect spacing */
-    }
-
-    .houppa-overlay-content {
-        padding: 40px 50px;
-        margin-top: 0;
-        text-align: center;
-    }
-
-    .ring-img {
-        max-width: 180px;
-        margin: 30px auto;
-    }
-}
 /* ================= BEACH================= */
 .beach-section {
     text-align: center;
