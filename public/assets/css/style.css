@@ -373,11 +373,35 @@ body.menu-open {
 .beach-section {
     text-align: center;
     padding: 30px 0;
+    background: #fff;
     color: #800020;
-    background: #f7f7f7;
+    position: relative;
 }
 
-/* Title */
+.beach-img {
+    position: relative;
+}
+
+.beach-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 15px 0 25px;
+    object-fit: cover;
+}
+
+/* Desktop Cropped Image */
+@media (min-width: 992px) {
+    .beach-img img.d-none.d-md-block {
+        height: auto;
+        width: 100%;
+        object-fit: cover !important;
+        object-position: top !important;   /* top crop */
+        border-radius: 12px;
+        margin-bottom: 0;
+    }
+}
+
 .beach-title {
     font-family: 'Artis-Swing', cursive;
     font-size: 22px;
@@ -385,121 +409,79 @@ body.menu-open {
     color: #800020;
 }
 
-/* Subtitle */
 .beach-subtitle {
     font-size: 14px;
     letter-spacing: 1px;
     margin-bottom: 20px;
-    color: #800020;
 }
 
-/* Image */
-.beach-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-    margin: 15px 0 25px 0;
-}
-
-/* Names */
 .beach-names {
     font-family: 'Artis-Swing', cursive;
     font-size: 26px;
-    margin: 10px 0 5px 0;
+    margin: 10px 0 5px;
 }
 
-/* Invitation line */
 .invite-line {
     font-size: 12px;
-    margin-bottom: 10px;
     line-height: 1.3;
+    margin-bottom: 10px;
 }
 
-/* Date text */
 .beach-date {
     font-size: 14px;
-    margin: 10px 0;
     line-height: 1.3;
+    margin: 10px 0;
 }
 
 .beach-date .subtext {
     font-size: 13px;
 }
 
-/* Location */
 .beach-location {
     font-size: 14px;
     line-height: 1.3;
     margin-bottom: 20px;
 }
 
-/* Palm image */
-.palm-img img {
-    max-width: 180px;
-    margin: 25px auto;
-}
-
-/* Transport text */
 .transport-text {
     font-size: 14px;
     line-height: 1.4;
     margin-top: 15px;
 }
 
-
-
-/* ---------------------------------- */
-/* RESPONSIVE – SAME LOGIC AS HOUPPA  */
-/* ---------------------------------- */
-
-
-/* MOBILE (575px) */
-@media (max-width: 575.98px) {
-
-    .beach-title {
-        font-size: 28px;
-    }
-
-    .beach-names {
-        font-size: 32px;
-    }
-
-    .beach-img img {
-        object-fit: contain !important;
-        margin-top: 15px;
-    }
-
-    .transport-text {
-        font-size: 14px;
-    }
-}
-
-
-/* TABLET (576px) */
-@media (min-width: 576px) {
-    .beach-title { font-size: 32px; }
-    .beach-names { font-size: 36px; }
-    .invite-line { font-size: 15px; }
-    .beach-date,
-    .beach-location,
-    .transport-text { font-size: 15px; }
-}
-
-
-/* TABLET LANDSCAPE (768px) */
-@media (min-width: 768px) {
-    .beach-title { font-size: 38px; }
-    .beach-names { font-size: 40px; }
-    .invite-line,
-    .beach-date,
-    .beach-location,
-    .transport-text { font-size: 16px; }
-}
-
-
-/* DESKTOP (992px) */
+/* ===========================
+   DESKTOP OVERLAY TEXT 
+=========================== */
 @media (min-width: 992px) {
+     .overlay-text {
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);  
+        z-index: 10;
+        text-align: center;         
+        width: 100%;
+        max-width: 350px;           
+        color: #800020;              
+    }
+    .beach-img {
+        padding-top: 80px;          
+    }
+    .beach-content {
+        position: absolute;
+        top: 320px;             
+        left: 65%;             
+        transform: translateX(-50%);  
+        width: 350px;
+        z-index: 10;
+        text-align: center;
+    }
+
+
+    .container * {
+        position: relative;
+        z-index: 5;
+    }
 
     .beach-section {
         padding: 80px 0;
@@ -507,17 +489,10 @@ body.menu-open {
 
     .beach-title {
         font-size: 45px;
-        margin-bottom: 10px;
-    }
-
-    .beach-img img {
-        object-fit: contain !important;
-        margin-bottom: 30px;
     }
 
     .beach-names {
         font-size: 48px;
-        margin: 15px 0;
     }
 
     .invite-line,
@@ -526,13 +501,37 @@ body.menu-open {
     .transport-text {
         font-size: 18px;
     }
+}
 
-    .palm-img img {
-        max-width: 220px;
-        margin: 30px auto;
+@media (max-width: 575.98px) {
+    .beach-title { font-size: 28px; }
+    .beach-names { font-size: 32px; }
+
+    .beach-img img {
+        object-fit: contain !important;
+        border-radius: 10px;
     }
 }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .beach-title { font-size: 32px; }
+    .beach-names { font-size: 36px; }
+
+    .invite-line,
+    .beach-date,
+    .beach-location,
+    .transport-text { font-size: 15px; }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .beach-title { font-size: 38px; }
+    .beach-names { font-size: 40px; }
+
+    .invite-line,
+    .beach-date,
+    .beach-location,
+    .transport-text { font-size: 16px; }
+}
 
 /* ================= HOTELS SECTION ================= */
 .hotels-section {

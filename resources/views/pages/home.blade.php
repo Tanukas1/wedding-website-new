@@ -76,49 +76,64 @@
     </div>
 </div>
 <section id="beach" class="beach-section sr-fade">
-    <div class="container">
-
-        <!-- Title -->
-        <h1 class="beach-title">LA DOLCE PYTEL </h1>
+    <div class="overlay-text">
+        <h1 class="beach-title">LA DOLCE PYTEL</h1>
         <p class="beach-subtitle">White party</p>
+    </div>
 
-        <!-- Illustration -->
-        <div class="beach-img mx-auto">
-            <img src="{{ asset('assets/images/home/new/party.jpg') }}" alt="" class="img-fluid">
+    <div class="beach-img mx-auto">
+        <img src="{{ asset('assets/images/home/new/party-mobile.jpg') }}" 
+            alt="Mobile Party" 
+            class="img-fluid d-block d-md-none">
+        <img src="{{ asset('assets/images/home/new/party-desktop.jpg') }}" 
+            alt="Desktop Party" 
+            class="img-fluid d-none d-md-block">
+
+        <!-- RIGHT SIDE OVERLAY CONTENT for Desktop -->
+        <div class="beach-content d-none d-md-block">
+            <h2 class="beach-names">TAMARA & SOLAL</h2>
+            <p class="invite-line">vous attendent pour une White party</p>
+
+            <p class="beach-date">
+                Le jeudi 30 juillet 2026 <br>
+                <span class="subtext">À partir de 16h</span>
+            </p>
+
+            <p class="beach-location">
+                à la mairie du XVIe arrondissement <br>
+                71 av. Henri Martin, 75116 
+            </p>
+
+            <p class="transport-text">
+                Des navettes vous attendront <br>
+                devant les 3 hôtels proposés par les mariés, <br>
+                à 11h précises
+            </p>
         </div>
+    </div>
 
-        <!-- Names -->
+    <!-- MOBILE CONTENT (remains normal) -->
+    <div class="container d-md-none">
         <h2 class="beach-names">TAMARA & SOLAL</h2>
+        <p class="invite-line">vous attendent pour une White party</p>
 
-        <!-- Invitation -->
-        <p class="invite-line"> vous attendent pour une White party </p>
-
-        <!-- Date -->
         <p class="beach-date">
-           Le jeudi 30 juillet 2026 <br>
-            <span class="subtext">À partir de 16h </span>
+            Le jeudi 30 juillet 2026 <br>
+            <span class="subtext">À partir de 16h</span>
         </p>
-
-        <!-- Location -->
         <p class="beach-location">
             à la mairie du XVIe arrondissement <br>
             71 av. Henri Martin, 75116 
         </p>
-
-        <!-- Palm trees -->
-        <div class="palm-img mx-auto">
-            <img src="{{ asset('assets/images/home/PALMIERS.png') }}" class="img-fluid" alt="">
-        </div>
-
-        <!-- Transport -->
         <p class="transport-text">
-            Des navettes vous attendront<br>
-            devant les 3 hôtels proposés par les mariés,<br>
+            Des navettes vous attendront <br>
+            devant les 3 hôtels proposés par les mariés, <br>
             à 11h précises
         </p>
-
     </div>
+
 </section>
+
 <section id="hotels" class="hotels-section">
     <div class="container text-center">
         <!-- Heading -->
