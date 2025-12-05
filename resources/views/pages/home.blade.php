@@ -26,14 +26,10 @@
     </div>
 </div>
 <div id="houppa" class="houppa-overlay-wrapper">
-    <p class="text-end hebrew-top">בס״ד</p>
-
+    <p class="hebrew-top">בס״ד</p>
     <h1 class="houppa-title">HOUPPA & RÉCEPTION</h1>
-
     <img src="{{ asset('assets/images/home/new/ring.png') }}" alt="" class="img-fluid overlay-img">
-
     <div class="houppa-overlay-content">
-
         <!-- Parents Left & Right -->
         <div class="row justify-content-center parents-row">
             <div class="col-md-4 text-start parents-left">
@@ -52,7 +48,8 @@
 
         <p class="invitation-line italic-line">
             Et avec l’amour de nos grands parents :<br>
-            Tamara et Georges Lévy Z’’L, Mady et Félix Benitah Z’’L, Max Pytel Z’’L
+            Tamara et Georges Lévy Z’’L, Mady et Félix Benitah
+            <br> Z’’L, Max Pytel Z’’L
         </p>
 
         <p class="invitation-line italic-line">
@@ -62,7 +59,6 @@
 
         <!-- Couple Names (unchanged font) -->
         <h2 class="couple-names">TAMARA & SOLAL</h2>
-        <p class="hebrew-names">שמענון משה    שיילה</p>
 
         <p class="invitation-line italic-line">
             Et seront honorés de votre présence pour<br>
@@ -85,65 +81,50 @@
 
     </div>
 </div>
-
 <section id="beach" class="beach-section sr-fade">
-    <div class="overlay-text">
-        <h1 class="beach-title">LA DOLCE PYTEL</h1>
-        <p class="beach-subtitle">White party</p>
-    </div>
-
-    <div class="beach-img mx-auto">
-        <img src="{{ asset('assets/images/home/new/party-mobile.jpg') }}" 
-            alt="Mobile Party" 
-            class="img-fluid d-block d-md-none">
-        <img src="{{ asset('assets/images/home/new/party-desktop.jpg') }}" 
-            alt="Desktop Party" 
-            class="img-fluid d-none d-md-block">
-
-        <!-- RIGHT SIDE OVERLAY CONTENT for Desktop -->
-        <div class="beach-content d-none d-md-block">
-            <h2 class="beach-names">TAMARA & SOLAL</h2>
-            <p class="invite-line">vous attendent pour une White party</p>
-
-            <p class="beach-date">
-                Le jeudi 30 juillet 2026 <br>
-                <span class="subtext">À partir de 16h</span>
-            </p>
-
-            <p class="beach-location">
-                à la mairie du XVIe arrondissement <br>
-                71 av. Henri Martin, 75116 
-            </p>
-
-            <p class="transport-text">
-                Des navettes vous attendront <br>
-                devant les 3 hôtels proposés par les mariés, <br>
-                à 11h précises
-            </p>
+    <div class="beach-border-box">
+        <div class="overlay-text">
+            <h1 class="beach-title">LA DOLCE PYTEL</h1>
+            <p class="beach-subtitle">White party</p>
         </div>
-    </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- LEFT IMAGE -->
+                <div class="col-12 col-lg-6 mb-4 ">
+                    <div class="beach-img">
+                        <img src="{{ asset('assets/images/home/new/party.jpg') }}" 
+                             alt="Party" class="img-fluid">
+                    </div>
+                </div>
+                <!-- RIGHT CONTENT -->
+                <div class="col-12 col-lg-6">
+                    <div class="beach-content">
+                        <h2 class="beach-names">TAMARA & SOLAL</h2>
+                        <p class="invite-line">vous attendent pour une White party</p>
+                        <p class="beach-date">
+                            Le jeudi 30 juillet 2026 <br>
+                            <span class="subtext">À partir de 16h</span>
+                        </p>
+                        <p class="beach-location">
+                            Au castello di Trescenza <br>
+                            Via del Casale Della Crescenza 1, Rome
+                        </p>
+                        <p class="transport-text">
+                            Des navettes vous attendront <br>
+                            devant les 3 hôtels proposés par les mariés, <br>
+                            à 11h précises
+                        </p>
+                    </div>
+                </div>
 
-    <!-- MOBILE CONTENT (remains normal) -->
-    <div class="container d-md-none">
-        <h2 class="beach-names">TAMARA & SOLAL</h2>
-        <p class="invite-line">vous attendent pour une White party</p>
+            </div>
+        </div>
 
-        <p class="beach-date">
-            Le jeudi 30 juillet 2026 <br>
-            <span class="subtext">À partir de 16h</span>
-        </p>
-        <p class="beach-location">
-            à la mairie du XVIe arrondissement <br>
-            71 av. Henri Martin, 75116 
-        </p>
-        <p class="transport-text">
-            Des navettes vous attendront <br>
-            devant les 3 hôtels proposés par les mariés, <br>
-            à 11h précises
-        </p>
     </div>
 
 </section>
+
+
 
 <section id="hotels" class="hotels-section">
     <div class="container text-center">

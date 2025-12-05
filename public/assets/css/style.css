@@ -111,6 +111,9 @@ body.menu-open {
 }
 
 /* ================= GENERAL SECTIONS ================= */
+/* ==========================
+     IMAGE WRAPPER
+========================== */
 .mairie-img {
     position: relative;
     width: 100%;
@@ -123,13 +126,15 @@ body.menu-open {
     display: block;
     border-radius: 10px;
     object-fit: cover;
-    padding-top: 60px !important; 
+    padding-top: 60px !important;
 }
 
-/* Overlay Text */
+/* ==========================
+     TEXT OVERLAY
+========================== */
 .text-overlay {
     position: absolute;
-    top: 38%;  
+    top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -137,70 +142,49 @@ body.menu-open {
     width: 90%;
 }
 
-/* Text Styles */
-.text-overlay .mairie-title {
-    font-style: italic;
-    font-size: 25px;
-    font-weight: 400;
-    margin-bottom: 10px;
+/* ==========================
+   GLOBAL FONT (ALL TEXT EXCEPT COUPLE)
+========================== */
+.text-overlay .mairie-title,
+.text-overlay .small-text,
+.text-overlay .oui-text,
+.text-overlay .event-date,
+.text-overlay .event-date .sub-text,
+.text-overlay .address,
+.text-overlay .address .sub-text {
+    font-family: "Times New Roman", serif !important;
+    font-style: italic !important;
+    font-size: 20px !important;       /* DESKTOP FIX */
+    line-height: 1.3 !important;      /* DESKTOP FIX */
+    color: #800020 !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.3px !important;
 }
 
+/* ❌ DO NOT TOUCH – COUPLE NAME */
 .text-overlay .couple-names {
     font-family: 'Artis-Swing', cursive;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 500;
     margin-bottom: 10px;
     color: #800020;
 }
 
-.text-overlay .small-text {
-    font-size: 16px;
-    color: #800020;
-}
-
-.text-overlay .oui-text {
-    font-size: 30px;
-    font-style: italic;
-    margin: 5px 0;
-}
-
-.text-overlay .event-date {
-    font-size: 16px;
-    font-style: italic;
-    color: #800020;
-}
-
-.text-overlay .event-date .sub-text {
-    font-size: 16px;
-}
-.text-overlay .address {
-    font-size: 16px;
-    font-style: italic;
-    color: #800020;
-}
-
-.text-overlay .address .sub-text {
-    font-size: 14px;
-}
-
-/* TABLET VIEW */
+/* ==========================
+     RESPONSIVE — TABLET
+========================== */
 @media (min-width: 576px) {
-    .text-overlay .mairie-title { font-size: 40px; }
-    .text-overlay .couple-names { font-size: 38px; }
-    .text-overlay .oui-text { font-size: 28px; }
-    .text-overlay .event-date { font-size: 18px; }
-    .text-overlay .address { font-size: 18px; }
+    /* NO FONT CHANGES HERE NOW */
 }
 
+/* TABLET LARGE */
 @media (min-width: 768px) {
-    .text-overlay .mairie-title { font-size: 46px; }
-    .text-overlay .couple-names { font-size: 42px; }
-    .text-overlay .oui-text { font-size: 32px; }
-    .text-overlay .event-date { font-size: 20px; }
-    .text-overlay .address { font-size: 20px; }
+    /* NO FONT CHANGES HERE NOW */
 }
 
-/* ✅ DESKTOP FIX (min-width 992px) */
+/* ==========================
+     DESKTOP VIEW
+========================== */
 @media (min-width: 992px) {
     .mairie-img img {
         padding-top: 65px !important;
@@ -208,53 +192,51 @@ body.menu-open {
         width: 100%;
         object-fit: cover;
     }
+
     .text-overlay {
         top: 50%;
         left: 35%;
         transform: translate(-50%, -50%);
         width: 80%;
     }
+}
 
-    .text-overlay .mairie-title {
-        font-size: 56px;
-        line-height: 1.2;
-    }
-
-    .text-overlay .couple-names {
-        font-size: 48px;
-        line-height: 1.2;
-    }
-
-    .text-overlay .oui-text {
-        font-size: 48px;
-        margin: 10px 0;
-    }
-
-    .text-overlay .event-date {
-        font-size: 26px;
-    }
-    .text-overlay .address {
-        font-size: 26px;
+/* ==========================
+     MOBILE VIEW
+========================== */
+@media (max-width: 575px) {
+    .text-overlay .mairie-title,
+    .text-overlay .small-text,
+    .text-overlay .oui-text,
+    .text-overlay .event-date,
+    .text-overlay .event-date .sub-text,
+    .text-overlay .address,
+    .text-overlay .address .sub-text {
+        font-size: 16px !important;
+        line-height: 1.2 !important;
     }
 }
+
 /* ================= HOUPPA SECTION ================= */
 .houppa-overlay-wrapper {
-    padding: 30px 10px;
     background: #f7f7f7;
     text-align: center;
     color: #800020;
     font-family: "Times New Roman", serif;
+    background-image: url('../images/home/new/Lace-border-desktop.png');
+    background-size: 100% auto;      
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 90px 20px;              
 }
 
-/* SMALL TOP HEBREW */
 .hebrew-top {
     font-size: 14px;
     font-weight: bold;
 }
 
-/* TITLE */
 .houppa-title {
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 10px;
     font-family: 'Artis-Swing', cursive;
 }
@@ -262,271 +244,261 @@ body.menu-open {
 .overlay-img {
     width: 150px !important;
     height: auto;
-    margin: 5px auto 15px auto !important;
+    margin: 5px auto 5px auto !important;
 }
-
-.parents-block {
-    font-size: 14px;
-    line-height: 1.4;
-    color: #800020;
+.parents-block,
+.italic-line,
+.highlighted-date,
+.ceremony-location,
+.hebrew-names {
     font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+    color: #800020 !important;   
+    font-weight: 500;             
+    letter-spacing: 0.3px;
 }
 
 .parents-row {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;                
 }
 
 .parents-left,
 .parents-right {
-    width: 50%;
+    width: auto !important;  
+    max-width: 220px;        
 }
 
-.parents-left {
-    text-align: left !important;
-}
+.parents-left { text-align: left !important; }
+.parents-right { text-align: right !important; }
 
-.parents-right {
-    text-align: right !important;
-}
-
-/* ITALIC LINES */
-.italic-line {
-    font-style: italic;
-    font-size: 15px;
-    line-height: 1.5;
-
-}
-
-/* COUPLE NAMES */
 .couple-names {
     font-family: 'Artis-Swing', cursive;
-    font-size: 36px;
+    font-size: 32px;
     margin: 15px 0 5px;
 }
 
-/* HEBREW NAMES */
-.hebrew-names {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-/* DATE HIGHLIGHT */
-.highlighted-date {
-    font-size: 20px;
-    color: #800020;
-    font-style: italic;
-    margin-top: 10px;
-}
-
-/* LOCATION */
-.ceremony-location {
-    font-size: 16px;
-    font-style: italic;
-    margin-top: 5px;
-}
-
-/* MOBILE VIEW — KEEP SAME 2 COLUMN STRUCTURE */
 @media (max-width: 575.98px) {
-
-    .houppa-title {
-        font-size: 28px;
+    .houppa-overlay-wrapper {
+        background-image: url('../images/home/new/Lase-border-mobile.png');
+        background-size: 100% auto; 
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding: 49px 15px;
     }
 
-    /* FORCE SIDE BY SIDE ON MOBILE TOO */
     .parents-row {
         display: flex !important;
-        flex-direction: row !important;
-        margin-bottom: 15px;
+        justify-content: center !important; 
+        gap: 20px !important;               
     }
 
     .parents-left,
     .parents-right {
-        width: 50% !important;
-        text-align: left !important;
+        width: 42% !important;              
+        text-align: center !important;      
     }
 
-    .parents-right {
-        text-align: right !important;
-    }
-
-    .parents-block {
-        font-size: 13px;
-    }
-
-    .couple-names {
-        font-size: 30px;
-    }
-
-    .highlighted-date {
-        font-size: 18px;
+    /* Mobile font adjustments for unified text */
+    .parents-block,
+    .italic-line,
+    .highlighted-date,
+    .ceremony-location,
+    .hebrew-names {
+        font-size: 12px !important;
+        line-height: 1.2 !important;
     }
 }
-
 
 /* ================= BEACH================= */
 .beach-section {
-    text-align: center;
-    padding: 30px 0;
     background: #fff;
     color: #800020;
     position: relative;
+    background-image: url('../images/home/new/Lace-border-desktop.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 70px 20px;
+}
+@media (max-width: 575px) {
+    .beach-section {
+        background-image: url('../images/home/new/Lase-border-mobile.png');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: top center;
+        padding: 20px 15px;
+    }
 }
 
-.beach-img {
-    position: relative;
+.beach-border-box {
+    padding: 35px 20px; 
+    border: 14px solid transparent;
+    border-image-source: url("../images/lace-border.png");
+    border-image-slice: 60;
+    border-image-repeat: round;
+    border-image-width: 14px;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.beach-border-box .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.overlay-text {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.beach-title {
+    font-family: 'Artis-Swing', cursive;
+    font-size: 26px;
+    margin-bottom: 5px;
+    color: #800020;
+}
+.beach-subtitle {
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+    color: #800020 !important;
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 .beach-img img {
     width: 100%;
-    height: auto;
+    height: 500px !important;
     border-radius: 12px;
-    margin: 15px 0 25px;
     object-fit: cover;
 }
 
-/* Desktop Cropped Image */
-@media (min-width: 992px) {
-    .beach-img img.d-none.d-md-block {
-        height: auto;
-        width: 100%;
-        object-fit: cover !important;
-        object-position: top !important;   /* top crop */
-        border-radius: 12px;
-        margin-bottom: 0;
-    }
-}
-
-.beach-title {
-    font-family: 'Artis-Swing', cursive;
-    font-size: 22px;
-    margin-bottom: 5px;
-    color: #800020;
-}
-
-.beach-subtitle {
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+.beach-content {
+    text-align: center;
 }
 
 .beach-names {
     font-family: 'Artis-Swing', cursive;
-    font-size: 26px;
-    margin: 10px 0 5px;
+    font-size: 30px;
+    margin-bottom: 8px;
 }
 
-.invite-line {
-    font-size: 12px;
-    line-height: 1.3;
-    margin-bottom: 10px;
-}
-
-.beach-date {
-    font-size: 14px;
-    line-height: 1.3;
-    margin: 10px 0;
+.invite-line,
+.beach-date,
+.beach-location,
+.transport-text {
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+    color: #800020 !important;
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 .beach-date .subtext {
-    font-size: 13px;
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+    color: #800020 !important;
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
-.beach-location {
-    font-size: 14px;
-    line-height: 1.3;
-    margin-bottom: 20px;
-}
-
-.transport-text {
-    font-size: 14px;
-    line-height: 1.4;
-    margin-top: 15px;
-}
-
-/* ===========================
-   DESKTOP OVERLAY TEXT 
-=========================== */
+/* ======================
+   DESKTOP VIEW (>=992px)
+====================== */
 @media (min-width: 992px) {
-     .overlay-text {
-        position: absolute;
-        top: 40px;
-        left: 50%;
-        transform: translateX(-50%);  
-        z-index: 10;
-        text-align: center;         
-        width: 100%;
-        max-width: 350px;           
-        color: #800020;              
-    }
-    .beach-img {
-        padding-top: 80px;          
-    }
-    .beach-content {
-        position: absolute;
-        top: 320px;             
-        left: 65%;             
-        transform: translateX(-50%);  
-        width: 350px;
-        z-index: 10;
-        text-align: center;
-    }
-
-
-    .container * {
-        position: relative;
-        z-index: 5;
-    }
 
     .beach-section {
-        padding: 80px 0;
+        padding: 70px 0;
+        background-image: url('../images/home/new/Lace-border-desktop.png');
+    }
+
+    .beach-border-box {
+        padding: 55px 40px; /* padding for desktop */
+    }
+
+    .overlay-text {
+        margin-bottom: 40px;
     }
 
     .beach-title {
-        font-size: 45px;
+        font-size: 30px;
     }
 
     .beach-names {
-        font-size: 48px;
+        font-size: 32px;
     }
 
     .invite-line,
     .beach-date,
     .beach-location,
     .transport-text {
-        font-size: 18px;
+        font-size: 20px;
+        line-height: 1.3 !important;
+    }
+
+    .beach-img img {
+        display: block;
+        width: 100%;
+        height: 500px;
+        border-radius: 12px;
+        object-fit: cover;
+        object-position: top center;
+        margin: 0 auto; 
+    }
+    .beach-img {
+        padding-left: 40px; 
+    }
+
+    .beach-content {
+        text-align:center;
+        padding-left: 0px;
+        padding-right: 200px; 
     }
 }
 
-@media (max-width: 575.98px) {
+/* ======================
+   MOBILE VIEW (<=575px)
+====================== */
+@media (max-width: 575px) {
+
     .beach-title { font-size: 28px; }
     .beach-names { font-size: 32px; }
 
-    .beach-img img {
-        object-fit: contain !important;
-        border-radius: 10px;
+    .beach-border-box {
+        padding: 20px 15px;
     }
-}
 
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .beach-title { font-size: 32px; }
-    .beach-names { font-size: 36px; }
+   .beach-img img {
+    width: 100%;
+    height: 252px !important;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: top center; 
+    }
+    .beach-content {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
 
+    /* Mobile adjustments for unified text */
+    .beach-subtitle,
     .invite-line,
     .beach-date,
     .beach-location,
-    .transport-text { font-size: 15px; }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .beach-title { font-size: 38px; }
-    .beach-names { font-size: 40px; }
-
-    .invite-line,
-    .beach-date,
-    .beach-location,
-    .transport-text { font-size: 16px; }
+    .transport-text {
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+    }
 }
 
 /* ================= HOTELS SECTION ================= */

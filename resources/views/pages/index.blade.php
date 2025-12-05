@@ -83,10 +83,13 @@
     }
 
     .date-place {
-        font-size: 15px;
+        font-family: "Times New Roman", serif;
         font-style: italic;
-        color: #800020;
-        line-height: 1.7;
+        font-size: 20px !important;
+        line-height: 1.3 !important;
+        color: #800020 !important;
+        font-weight: 500;
+        letter-spacing: 0.3px;
     }
 
    .counter-box div {
@@ -105,8 +108,12 @@
         color: #fff;
         padding: 10px 30px;
         border-radius: 5px;
-        font-size: 18px;
         margin-top: 260px; /* Button position */
+        font-family: "Times New Roman", serif;
+        font-style: italic;
+        font-size: 20px !important;
+        font-weight: 500;
+        letter-spacing: 0.3px;
     }
 
     .btn-programme:hover {
